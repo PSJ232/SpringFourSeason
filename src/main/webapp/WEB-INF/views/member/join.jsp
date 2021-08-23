@@ -138,7 +138,7 @@
 </head>
 <body>
 <div class="container">
-<%--   	<jsp:include page="../inc/header.jsp" flush="true" />--%>
+   	<jsp:include page="../inc/header.jsp" flush="true" />
  	<!-- header -->
    	<div class="top_banner">
 		<div class="page_title"><h2>회원가입</h2></div>
@@ -258,7 +258,7 @@
  		</div> <!-- join_us_box 닫기 -->		
 
 	
-<%--	<jsp:include page="../inc/footer.jsp" ></jsp:include>--%>
+	<jsp:include page="../inc/footer.jsp" ></jsp:include>
   </div> <!-- container 닫기 -->
 	
 	

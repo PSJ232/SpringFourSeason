@@ -23,12 +23,12 @@
 <body>
 
 	<header>
-<%--  		<jsp:include page="../inc/header.jsp"></jsp:include>--%>
+  		<jsp:include page="../inc/header.jsp"></jsp:include>
 	</header>
 	<div class="mypage_container">
 	<div class="login_all">
 	<h1 id="login">로그인</h1>
-	<form action="MemberLoginPro.me" method="post">
+	<form action='<c:url value="/member/login" />' method="post">
 		<input type="email" name="m_id" class="inp" placeholder="아이디(이메일)"><br>
 		<input type="password" name="m_pass" class="inp" placeholder="비밀번호"><br>
 		<input type="checkbox" id="checklogin" name="autoLogin">로그인 상태 유지<br>
@@ -37,10 +37,10 @@
 		<a class="fin" href="findPass.jsp">비밀번호 찾기</a><br>
 		
 		<p id="sns">SNS계정으로 간편 로그인</p> <br> 
-		<a href="https://kukka.kr/account/social-login/facebook/"> <img class="log_img" src="img/facebook.png"></a>
-		<a href="https://kukka.kr/account/social-login/naver/"> <img class="log_img" src="img/naver.png"></a>
-		<a href="https://kukka.kr/account/social-login/kakao/"> <img class="log_img" src="img/kakao.png"></a><br>
-		<input type="button" value="회원가입" class="joinbutton" onclick="location.href='MemberJoin.me'"><br>
+		<a href="https://kukka.kr/account/social-login/facebook/"> <img class="log_img" src='<c:url value="/resources/img/facebook.png" />'></a>
+		<a href="https://kukka.kr/account/social-login/naver/"> <img class="log_img" src='<c:url value="/resources/img/naver.png" />'></a>
+		<a href="https://kukka.kr/account/social-login/kakao/"> <img class="log_img" src='<c:url value="/resources/img/kakao.png" />'></a><br>
+		<input type="button" value="회원가입" class="joinbutton" onclick="location.href='<c:url value="/member/join" />'"><br>
 	</form>
 <%--		<%if(cartDetail!=null){ %>--%>
 <%--		<form action="VisitorOrderNow.od" method="post">--%>
@@ -63,7 +63,7 @@
 	</div>
 
 	<footer>
-<%--		<jsp:include page="../inc/footer.jsp"></jsp:include>--%>
+		<jsp:include page="../inc/footer.jsp"></jsp:include>
 	</footer>
 </body>
 </html>

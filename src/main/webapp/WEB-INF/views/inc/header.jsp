@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -63,9 +64,9 @@ if(m_id == null) {
 			<%
 			if (m_id == null) {
 			%>
-				<a class="nav_service_item" href="MemberLogin.me">로그인</a>
+				<a class="nav_service_item" href='<c:url value="/member/login" />'>로그인</a>
 				<i class="nav_service_bar"></i>
-				<a class="nav_service_item"	href="MemberJoin.me">회원가입<span class="color_blue fontweight_600">(1000포인트 지급!)</span></a>
+				<a class="nav_service_item"	href='<c:url value="/member/join" />'>회원가입<span class="color_blue fontweight_600">(1000포인트 지급!)</span></a>
 				<i class="nav_service_bar"></i>
 				<a class="nav_service_item fontweight_600">기업제휴</a>
 			<%
@@ -77,7 +78,7 @@ if(m_id == null) {
 				<%
 				}
 				%>
-				<a class="nav_service_item"	href="MemberLogout.me">로그아웃</a>
+				<a class="nav_service_item"	href='<c:url value="/member/logout" />'>로그아웃</a>
 				<i class="nav_service_bar"></i>
 				<a class="nav_service_item fontweight_600">기업제휴</a>
 			<%
@@ -97,8 +98,8 @@ if(m_id == null) {
 					<li class="item"><a href="Class.shop">플라워클래스</a></li>
 				</ul>
 				<div class="nav_bar_icon">
-					<a href=<%=moveMypage %>><img src="admin_layout/img/profile.png" alt="go to mypage" class="nav_icon"></a> 
-					<a href="Cart.cr"><img src="admin_layout/img/bag.png" alt="shopping cart" class="nav_icon"></a>
+					<a href=<%=moveMypage %>><img src='<c:url value="/resources/img/profile.png" />' alt="go to mypage" class="nav_icon"></a>
+					<a href="Cart.cr"><img src='<c:url value="/resources/img/bag.png" />' alt="shopping cart" class="nav_icon"></a>
 				</div>
 			</nav>
 		</div>
