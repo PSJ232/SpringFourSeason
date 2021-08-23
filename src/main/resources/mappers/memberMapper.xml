@@ -8,4 +8,7 @@
         VALUES(#{m_id}, #{m_pass}, #{m_name}, #{m_phone}, #{m_birth}, #{m_gender}, #{g_id}, #{m_agree}, now(), 1000)
     </insert>
 
+    <select id="userCheck" resultType="com.itwillbs.domain.MemberBean">
+        SELECT * FROM member WHERE m_id=#{m_id} AND m_pass=#{m_pass}
+    </select>
 </mapper>

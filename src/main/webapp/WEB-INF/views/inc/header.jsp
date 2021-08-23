@@ -49,7 +49,7 @@ if (cookie_check != null) {
 
 String moveMypage = "";
 if(m_id == null) {
-	moveMypage = "MemberLogin.me";
+	moveMypage = "/member/login";
 } else {
 	moveMypage = "MypageOrderStatus.me";
 }

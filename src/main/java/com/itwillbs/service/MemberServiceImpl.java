@@ -18,4 +18,9 @@ public class MemberServiceImpl implements MemberService{
     public void registMember(MemberBean memberBean) {
         memberDAO.registMember(memberBean);
     }
+
+    @Override
+    public MemberBean userCheck(MemberBean memberBean) {
+        return memberDAO.userCheck(memberBean);
+    }
 }

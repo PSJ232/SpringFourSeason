@@ -20,4 +20,9 @@ public class MemberDAOImpl implements MemberDAO{
         sqlSession.insert(namespace + ".registMember", memberBean);
     }
 
+    @Override
+    public MemberBean userCheck(MemberBean memberBean) {
+        return sqlSession.selectOne(namespace + ".userCheck", memberBean);
+    }
+
 }
