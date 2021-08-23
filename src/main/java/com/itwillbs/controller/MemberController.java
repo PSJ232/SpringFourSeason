@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class MemberController {
@@ -20,8 +21,15 @@ public class MemberController {
     }
 
     @RequestMapping(value = "/member/join", method = RequestMethod.POST)
-    public String joinPro(MemberBean memberBean){
+    public String joinPro(MemberBean memberBean, HttpServletRequest request){
+        String m_birth = request.getParameter("year") + "-" + request.getParameter("month") + "-" + request.getParameter("day");
+        memberBean.setM_birth(m_birth);
         memberService.registMember(memberBean);
+        return "redirect:/member/login";
+    }
+
+    @RequestMapping(value = "/member/login", method = RequestMethod.GET)
+    public String login(){
         return "/member/login";
     }
 }

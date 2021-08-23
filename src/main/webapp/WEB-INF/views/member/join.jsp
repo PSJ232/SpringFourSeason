@@ -149,7 +149,7 @@
 		<div class="inbox">
 			<div class="inner">	
 		 
-					<form action="MemberJoinPro.me" name=formJoin method="post" onsubmit="return checkForm()">				
+					<form action='<c:url value="/member/join" />' name=formJoin method="post" onsubmit="return checkForm()">
 						<div class="join_info">						
 							 <div class="row">
 							 	<div class="join_name">이메일 (아이디)</div>

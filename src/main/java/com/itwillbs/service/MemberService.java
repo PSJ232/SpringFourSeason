@@ -4,5 +4,5 @@ import com.itwillbs.domain.MemberBean;
 
 public interface MemberService {
 
-    public boolean registMember(MemberBean memberBean);
+    public void registMember(MemberBean memberBean);
 }
