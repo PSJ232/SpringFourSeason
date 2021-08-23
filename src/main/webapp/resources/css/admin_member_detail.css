@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.container table {
+		border-collapse: collapse;
+		border: 1px solid #ececec;
+		width: 900px;
+		text-align: center;
+	}
+	.container table th {
+		background-color: #f7f7f7;
+	}
+	.container table td,th {
+		padding: 5px;
+	}
+	.container table tr:hover {
+		background-color: #FFDF24;
+	}
+	.container label {
+		float:left;
+		width: 150px;
+		font-size: 15px;
+		font-weight: bold;
+		margin-left: 15px;
+	}
+	.container input[type=text]{
+		border:none;
+		outline: none;
+		margin-bottom: 10px;
+		font-size: 14px;
+	}
+	.container fieldset {
+		padding: 20px;
+		border-radius: 5px;
+		width: 950px;
+		border: 2px solid #FFCD12;
+		margin-bottom: 25px;
+	}
+	.container legend {
+		padding: 15px;
+		font-size: 20px;
+	}
+	.container [id^='content_'] {
+		background-color: #FAF4C0;
+	}
+	#reviewList tr {
+		cursor: pointer;
+	}
+	#listBtn {
+		width: 100px;
+		height: 40px;
+		border: 1px solid #fff;
+		border-radius: 5px;
+		background-color: #FFDF24;
+		margin-left: 850px;
+	}
+	#listBtn:hover {
+		background-color: #FFCD12;
+		cursor: pointer;
+	}

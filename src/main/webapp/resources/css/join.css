@@ -1,0 +1,330 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.top_banner {
+
+	position: static;
+	display: block;
+	max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 60px;
+    text-align: center;
+}
+
+.top_banner h2 {    
+    padding: 40px 0;
+    border-bottom: solid 1px #dddddd;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 500;
+    letter-spacing: -.6px;
+    color: #333;
+}
+
+.join_us_box {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: block;
+}
+
+.join_us_box .inbox {
+    padding: 38px 0 50px;
+}
+
+.join_us_box .inbox .inner:first-of-type {
+    padding-top: 40px;
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+.join_us_box .row .join_name {
+    float: left;
+    width: 120px;
+    padding: 15px 0;
+    font-size: 15px;
+    font-weight: 450;
+    letter-spacing: -.24px;
+    color: #555;
+    position: relative;
+}
+
+.join_us_box .row .join_input {
+    overflow: hidden;
+    position: relative;
+}
+
+.join_us_box .row .join_input .textBox {
+    display: block;
+    width: 380px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 15px;
+    font-weight: 300;
+    color: #222;
+    margin: 3px 0;
+}
+
+.join_us_box .row .join_input .textbox_long{
+    width: 183px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    font-weight: 300;
+    color: #222;	
+}
+
+.join_us_box .row .join_input .textbox_short {
+    width: 85px;
+    height: 50px;
+    margin-right: 10px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    font-weight: 300;
+    color: #222;	
+}
+
+.join_us_box .row .join_input .btn {
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: -.21px;
+    color: #787878;
+    background: #ececec;
+    text-align: center;
+}
+
+.join_us_box .row .join_input .btn:hover {
+	background: black;
+	color: #FFFFFF;
+}
+
+.join_us_box .row .join_input .radio_gender {
+	display: none;
+}
+
+label {
+	cursor: pointer;
+}
+
+.join_us_box .row .join_input .gender_label {
+	width: 183px;
+	height: 50px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #222;	
+    border-radius: 5px;
+	display: inline-block;
+	margin-right: 10px;
+	text-align: center;
+	padding: 14px;
+	border: solid 1px #ececec;
+}
+
+.gender_label.active {
+	background-color: #ffcd32;
+}
+
+.checkMessage{
+	color: #ff4e50;
+    font-size: 14px;
+    font-weight: 300;
+ } 
+ 
+ .join_us_box .bottomForm {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.join_us_box .bottomForm .agreement_list {
+    padding: 10px 20px 20px;
+    border: #ececec 1px solid;
+    border-radius: 5px;
+    padding: 30px 20px;    
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.join_us_box .row .agreement_list .agree_part {
+    margin-top: 20px;
+    padding-top: 10px;   
+}
+
+.join_us_box .row .agreement_list .agree_part:first-of-type {
+    margin-top: 20px;
+    padding-top: 10px;    
+	border-top: #ececec 1px solid;
+}
+
+.agree_terms {
+    padding-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -.24px;
+    color: #888;
+}
+
+.join_us_box .bottomForm .inner .row .btn_submit {
+    padding: 0 0;
+    margin: 0 0;
+    border: none;
+    cursor: pointer;
+    width: 360px;
+    height: 48px;
+    background: #ececec;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 48px;
+    font-weight: 700;
+    letter-spacing: -.24px;
+    color: #787878;
+}
+
+.join_us_box .bottomForm .inner:last-of-type {
+    padding-bottom: 100px;
+}
+
+.join_us_box .bottomForm .inner {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 0 0 40px;
+}
+
+.join_us_box bottomForm .inner .row {
+    margin-top: 40px;
+}
+
+.terms_box {
+	margin-top:40px;
+    padding-top: 15px;
+    border-top: #d3d3d3 1px solid;
+}
+
+.terms_box .terms_title .row {
+    display: block;
+    margin-bottom: 15px;
+    padding: 0;	
+}
+
+.terms_box .terms_title .join_name {
+	 float: left;
+    width: 120px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -.24px;
+    color: #222;
+    position: relative;
+}
+
+.terms_box .terms_title .join_input{
+	margin-top: 0;
+    overflow: hidden;
+    padding-right: 140px;
+    position: relative;
+    display: block;
+}
+
+.terms_box .terms_list {
+	padding: 15px auto;
+}
+
+.terms_box .terms_list .agreement_list {
+    padding: 10px 20px 20px;
+    border: #ececec 1px solid;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: 300;
+    color: #878787;
+}
+
+.terms_box .terms_list .agreement_list .terms_txt {
+	margin-left: 5px;
+}
+
+.terms_box .terms_list .agreement_list .agree_all {
+	border-bottom: #ececec 1px solid;
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+
+.terms_box .terms_list .agreement_list .agree_part {
+    margin-top: 10px;
+}
+
+.terms_link {
+	text-align: center;
+	padding: 12px 0;
+}
+
+.terms_submit {
+	margin: 5px auto;	
+	text-align: center;
+}
+
+.terms_submit .submit_button {
+	padding: 0 0;
+	display: inline-block;
+}
+
+.terms_submit  .submit_button .btn_submit {
+	margin-top: 20px;
+    width: 360px;
+    height: 52px;
+    font-size: 16px;
+    font-weight: 300;
+    color: #787878;
+    border-radius: 5px;
+    border: none;    
+    cursor: pointer;
+}
+
+.terms_submit  .submit_button .btn_submit:hover {
+	background: #ffcd32;
+	color: black;
+}
+
+.terms_conditions, .personal_info {
+	cursor: pointer;
+	text-decoration: none;
+	color: #777777;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.textRed {
+	color: #ff2f2f
+}
+
+
+
+

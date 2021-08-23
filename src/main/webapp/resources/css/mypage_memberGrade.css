@@ -1,0 +1,528 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Noto Sans KR',sans-serif,NanumGothic,'나눔고딕',Dotum,'돋움',Helvetica,"Apple SD Gothic Neo";
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.memberGrade_div6 {
+	width: 1120px;
+	height: 771px;
+	display: absolute;
+/*     float: right; */
+/*     width: 68%; */
+    padding-bottom: 40px;
+}
+
+.memberGrade_article {
+	width: 761.6px;
+    height: 771px;
+    float: right;
+    padding-top: 40px;
+    margin-top: -689px;
+    display: block;
+	
+}
+
+.memberGrade_title {
+	display: block;
+    font-size: 15px;
+    font-weight: bold;
+    width: 761.6px;
+    height : 32.8px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.memberGrade_span {
+	width: 79.2px;
+	height: 32.8px;
+	font-size: 20px;
+    line-height: 33px;
+    font-weight: bold;
+    letter-spacing: -.44px;
+    color: #222;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+.memberGrade_div {
+	width: 761.6px;
+    height : 678.2px;
+    display: block;
+}
+
+.memberGrade_div_level {
+	width: 761.6px;
+    height : 263.8px;
+    padding-left: 280px;
+    border-top: #d3d3d3 1px solid;
+    padding-top: 20px;
+    position: relative;
+    display: block;
+}
+
+dl {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.memberGrade_dl{
+	width: 481.6px;
+    height : 69.8px;
+    display: block;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+}
+
+dd{
+	margin-inline-start: 40px;
+}
+
+.memberGrade_dd {
+	width: 240px;
+    height : 150px;
+    top: 20px;
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 500;
+    letter-spacing: -.36px;
+    color: #fff;
+    display: block;
+    text-align: center;
+    outline-width: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.memberGrade_strong {
+	background-color: #f7f7f7;
+    color: #787878;
+    margin: 0;
+    width: 240px;
+    height: 150px;
+    padding-top: 57px;
+    display: block;
+    font-weight: bold;
+}
+
+.memberGrade_dd2 {
+	width: 481.6px;
+	height: 69.8px;
+	margin-top: 0;
+    padding-top: 12px;
+    line-height: 29px;
+    font-weight: 100;
+    letter-spacing: -.3px;
+    color: #787878;
+    text-align: left;
+    display: block;
+    outline-width: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+.memberGrade_strong2 {
+	font-size: 17px;
+	color : black;
+	font-weight: normal;
+}
+
+.memberGrade_span2 {
+	font-size: 15px;
+}
+
+p {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.memberGrade_p {
+	width: 481.6px;
+	height: 44px;
+	margin-top: 5px;
+	height: 44px;
+    padding-top: 9px;
+    border-radius: 22px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 100;
+    letter-spacing: -.24px;
+    color: #222;
+    display: block;
+    background-color: #f7f7f7;
+    text-align: center;
+    outline-width: 1px;
+ 
+}
+
+.memberGrade_strong3 {
+	color: #46cfa7;
+	display: inline-block;
+    padding-top: 0;
+}
+
+.memberGrade_span3 {
+	margin-left: 6px;
+}
+
+.memberGrade_p2 {
+	width: 481.6px;
+	height: 84px;
+	display: block;
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    margin-top: 20px;
+}
+
+.memberGrade_span4 {
+	width: 481.6px;
+	height: 10px;
+	position: relative;
+    padding-left: 10px;
+    font-size: 13px;
+    line-height: 28px;
+    font-weight: lighter;
+    letter-spacing: -.21px;
+    color: #787878;
+    display: block;
+    margin :0;
+    padding : 0;
+ 
+}
+
+.memberGrade_div2 {
+	width: 761.6px;
+	height: 374.4px;
+	margin-top: 40px;
+    padding-top: 0;
+    position: relative;
+    padding: 0;
+    display: block;
+}
+
+
+h4 {
+	margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.memberGrade_h4 {
+	margin-right: 10px;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: bold;
+    letter-spacing: -.27px;
+    color: #222;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    border-bottom: #d3d3d3 1px solid ;
+}
+
+.memberGrade_div3 {
+	width: 761.6px;
+	height: 333px;
+	margin-top: 15px;
+	display: block;
+}
+
+.memberGrade_div4 {
+	width: 761.6px;
+	height: 333px;
+	padding-top: 0;
+	position: relative;
+	display: block;
+}
+
+ol {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.memberGrade_ol {
+	display: none;
+	list-style: none;
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+}
+
+.memberGrade_li {
+	border: #ececec 1px solid;
+	display: block;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    text-align: -webkit-match-parent;
+}
+
+.memberGrade_dl2 {
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+}
+
+.memberGrade_dt {
+	width: 130px;
+	height: 80px;
+	background-color: #f7f7f7;
+    color: #787878;
+    display: block;
+    float: left;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    letter-spacing: -.27px;
+    text-align: center;
+ 	margin-left: 5px;
+    outline-width: 1px;
+}
+
+.memberGrade_dd3 {
+	overflow: hidden;
+    border-left: none;
+    padding-left: 30px;
+    display: block;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: -.21px;
+    color: #787878;
+    margin: 0;
+    outline-width: 1px;
+    margin-inline-start: 40px;
+}
+
+.memberGrade_span5 {
+	color: #222;
+    font-weight: 300;
+    display: block;
+    margin-top: 32px;
+}
+
+.memberGrade_span6 {
+	margin-top: 32px;
+	display: block;
+}
+
+.memberGrade_dt2 {
+	width: 130px;
+	height: 80px;
+	margin-left: 5px;
+	background-color: #46cfa7;
+	display: block;
+    float: left;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    letter-spacing: -.27px;
+    color: #fff;
+    text-align: center;
+    outline-width: 1px;
+}
+
+.memberGrade_span7 {
+	margin-top: 2px;
+	color: #222;
+    font-weight: 300;
+}
+
+.memberGrade_dt3 {
+	width: 130px;
+	height: 80px;
+	background-color: #ff4e50;
+	display: block;
+    float: left;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: normal;
+    letter-spacing: -.27px;
+    color: #fff;
+    text-align: center;
+    outline-width: 1px;
+}
+
+.memberGrade_dt4 {
+	width: 130px;
+	height: 80px;
+	background-color: #222;
+	display: block;
+    float: left;
+    padding-top: 30px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    letter-spacing: -.27px;
+    color: #fff;
+    text-align: center;
+    outline-width: 1px;
+}
+
+.memberGrade_div5 {
+	width: 761.6px;
+	height: 332px;
+	display: block;
+	
+}
+
+table {
+    border-collapse: collapse;
+    text-indent: initial;
+    border-spacing: 2px;
+    border-color: grey;
+}
+
+.memberGrade_table {
+	width: 761.6px;
+	height: 332px;
+}
+
+caption {
+    display: table-caption;
+    text-align: -webkit-center;
+}
+
+.memberGrade_caption {
+	position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+colgroup {
+    display: table-column-group;
+    width: 761.6px;
+	height: 331.5px;
+}
+
+col {
+    display: table-column;
+}
+
+.memberGrade_col {
+	width: 121.85px;
+	height: 331.5px;
+	
+}
+
+.memberGrade_col2 {
+	width: 159.93px;
+	height: 331.5px;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+th {
+    display: table-cell;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.memberGrade_div5 .memberGrade_table tr th {
+	padding: 20px 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+    background-color: #f7f7f7;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: #ececec 1px solid;
+}
+
+.memberGrade_div5 .memberGrade_table tr td {
+	text-align: center;
+    vertical-align: middle;
+    border-bottom: #ececec 1px solid;
+}
+
+.memberGrade_span8 {
+	width: 53.61px;
+	height: 20.8px;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+

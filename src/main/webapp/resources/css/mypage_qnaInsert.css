@@ -1,0 +1,152 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+.container {
+		display: flex;
+		width: 1240px;
+		margin: 100px auto;
+}
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}/* qnainsert */
+
+.qna_insert_all{
+	margin-left: 50px;
+	width: 765px;
+	float: right;
+}
+
+
+#qna_insert_title{
+	font-weight: 600;
+	font-size: 25px;
+	color: black;
+	float: left;
+	width: 765px;
+	
+	
+}
+#qna_insert_title_spen{
+	float: right;
+	color: #969696;
+	font-size: 15px;
+	margin-top: 10px;
+}
+#qna_insert_th{
+	display:inline-block;
+   	width: 765px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+	
+}
+#qna_insert_order_td{
+	width: 450px;
+	height: 50px;
+	border-radius: 5px;
+	margin-left: 52px;
+	border: 1px solid #969696; 
+}
+
+#qna_insert_order_btn{
+	background-color: #969696;
+	width: 90px;
+	height: 50px;
+	margin-left: 40px;
+	border-radius: 5px;
+	border: none;
+	float: right;
+	color: white;
+	font-weight: 500;
+	font-size: 14px;	
+	
+}
+
+#qna_insert_subject_td{
+	width: 585px;
+	height: 50px;
+	border-radius: 5px;
+	margin-left: 100px;
+	font-size:medium;
+	border: 1px solid #969696; 
+	margin-left: 150px;
+	float: right;	
+}
+
+#qna_insert_contents_td{
+	float: right;	
+	border-radius: 5px;
+	font-size:medium;
+	width: 585px;
+}
+#qna_insert_p{
+	color: #969696; 
+	margin-left: 190px;
+}
+#qna_insert_ul{
+	margin-bottom: 5px;
+}
+#qna_insert_li{
+	width: 400px;
+	height: 50px;
+	border-radius: 5px;
+	font-size:medium;
+	border: 1px solid #969696; 
+	margin-left: 180px;
+	margin-bottom: 5px;
+}
+
+.input-file-button{
+  padding: 15px 30px;
+  background-color:#969696;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  float: right;
+}
+#qna_insert_li_inp{
+/* 	position: absolute;  */
+	width: 1px; 
+	height: 1px; 
+	padding: 0; 
+	margin: -1px; 
+	overflow: hidden; 
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+
+#qna_insert_p2{
+	margin-left: 190px;	
+	color: #969696;
+}
+#qna_insert_submit{
+	background-color: #FFD228;
+	border-radius: 10px;
+	width: 400px;
+	height: 50px;
+	text-align: center;
+	border: none;
+	margin-top: 10px;
+	margin-left: 190px;
+	margin-bottom: 50px;
+}

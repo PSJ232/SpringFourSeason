@@ -1,0 +1,228 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+.container {
+		display: flex;
+		width: 1240px;
+		margin: 100px auto;
+}
+body {
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: 16px;
+	font-family: 'Noto Sans KR', sans-serif, NanumGothic, '나눔고딕', Dotum,
+		'돋움', Helvetica, "Apple SD Gothic Neo";
+}
+
+li {
+	list-style: none;
+	text-decoration: none;
+}
+
+a, a:active, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a, button {
+	cursor: pointer;
+}
+.mypage_orderHistoryDetail_all{
+	float: right;
+	width: 760px;
+	height: auto;
+	margin-bottom: 300px;
+	vertical-align: middle;
+}
+#mypage_orderHistoryDetail_tltle{
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+#mypage_orderHistoryDetail_dl{
+	margin: 0;
+	margin-top: 20px;
+	font-size: 15px;
+}
+#mypage_orderHistoryDetail_tltle_h3{
+	margin: 0;
+	float: left;
+	margin-right: 20px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+#mypage_orderHistoryDetail_dd{
+	float: left;
+	color: #dcdcdc;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+#mypage_orderHistoryDetail_btn{
+	color: #aaaaaa;
+	background-color: white;
+	border-radius: 50px;
+	width: 120px;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #dcdcdc;
+	float: right;
+	margin-bottom: 10px; 
+	font-size: 12px;
+	font-weight: 500;
+	padding: 5px;
+}
+.mypage_orderHistoryDetail_table_t{
+	width: 750px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+#mypage_orderHistoryDetail_table_td_s {
+	background-color: #f7f7f7;
+	height: 50px;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	width: 150px;
+}
+
+#mypage_orderHistoryDetail_table_td_b {
+	background-color: #f7f7f7;
+	height: 50px;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+}
+
+#mypage_orderHistoryDetail_table_th {
+	text-align: center;
+	font-size: 15px;
+	border-bottom: 1px solid #aaaaaa;	
+}
+
+#mypage_orderHistoryDetail_situation {
+	text-align: center;
+	font-size: 15px;
+	font-weight: 500;
+	border-bottom: 1px solid #aaaaaa;	
+}
+#mypage_orderHistoryDetail_tr{
+	font-size: 15px;
+	font-weight: 500;
+	text-align: center;
+}
+
+#mypage_orderHistoryDetail_td {
+	margin: 0;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+#mypage_orderHistoryDetail_img {
+	width: 100px;
+	height: auto;
+	background: no-repeat;
+	background-size: contain;
+	padding: 0;
+	float: left;
+}
+
+#mypage_orderHistoryDetail_span_one {
+	font-weight: 500;
+	margin: 10px;
+	font-size: 15px;
+	text-align: center;
+	border-bottom: 1px solid #f7f7f7;
+}
+
+#mypage_orderHistoryDetail_span_two {
+	color: #aaaaaa;
+	margin: 10px;
+	font-size: 15px;
+	font-weight: 300;
+	text-align: center;
+	border-bottom: 1px solid #f7f7f7;
+}
+#mypage_orderHistoryDetail_del_div{
+	width: 750px;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 20px;
+}
+#mypage_orderHistoryDetail_tltle_del_h3{
+	margin: 0;
+	float: left;
+	margin-right: 20px;
+	font-size: 18px;
+	font-weight: 600;
+}
+#mypage_orderHistoryDetail_del_dl{
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #fff9ee;
+	font-size: 15px;
+	font-weight: 500;
+}
+#mypage_orderHistoryDetail_del_dt{
+	padding: 5px;
+}
+#mypage_orderHistoryDetail_del_dd{
+	color: #aaaaaa;
+	padding: 5px;
+}
+
+.mypage_orderHistoryDetail_table_b{
+	width: 750px;
+/* 	height: auto; */
+	margin: 0;
+	padding: 0;
+	border-top: 2px solid #FFD228;
+	margin-top: 20px;
+	margin-bottom:20px;
+	clear: both;
+}
+#mypage_orderHistoryDetail_del_tr{
+	background-color: #fff9ee;
+	height: 100px;
+	border-right: 1px solid;
+	margin-top: 10px; 
+}
+#mypage_orderHistoryDetail_del_td{
+	height: 50px;
+	font-size: 15px;
+	font-weight: 700;
+	width: 150px;
+	line-height: 1.5;
+	padding-left: 5px;
+}
+#mypage_orderHistoryDetail_del_td_span{
+	color: #7FFFD4;
+	
+}
+#mypage_orderHistoryDetail_del_tr_b{
+	line-height: 1.5;
+	font-size: 15px;
+	font-weight: 400;
+	padding-right: 10px;
+	padding: 18px;
+}
+#mypage_orderHistoryDetail_del_span_r{
+	float: right;
+	padding-right: 10px;
+	color: #aaaaaa;
+}
+mypage_orderHistoryDetail_del_span_l{
+	color: #7FFFD4;
+}
+#mypage_orderHistoryDetail_p{
+	color: #aaaaaa;
+	padding-top: 10px;
+}

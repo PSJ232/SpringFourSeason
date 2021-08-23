@@ -1,0 +1,144 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.anniversary_container {
+	max-width: 490px;
+	padding: 10px 25px;
+}
+
+.anniversary_container .page_title {
+	display: block;
+	max-width: 490px;
+    margin: 0 auto;
+    padding: 0 20px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+
+.anniversary_container .page_title .title {
+    padding: 40px 0;
+    border-bottom: none;
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 800;
+    letter-spacing: -.6px;
+    color: #333;
+}
+
+.anniversary_container .ann_content_box {	
+	margin: 30px auto;
+	padding: 5px auto;
+	text-align: center;
+}
+
+.anniversary_container .ann_content_box .inbox {
+	 position: relative;
+	 display: inline-block;
+}
+
+.anniversary_container .ann_content_box .inbox .inner {
+    margin: 0 5px;
+}
+
+.anniversary_container .ann_content_box .inbox .inner .ann_form {	
+	line-height: 25px;
+}
+
+.ann_content_box .row {
+	display: block;
+    margin: 0;
+	padding: 10px 0;
+	text-align: left;
+}
+
+.ann_content_box .row .ann_name {
+    float: left;
+    width: 120px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -.24px;
+    color: #222;
+    position: relative;
+}
+
+.ann_content_box .row .ann_name .textStar{
+	color: #ffcd23;
+	margin-left: 3px;
+}
+
+.ann_content_box .row .ann_input {
+	margin-top: 0;
+    overflow: hidden;
+    padding-right: 10px;
+    position: relative;
+    display: block;
+}
+
+.ann_content_box .row .ann_input .textBox {
+    border: none;
+    background: 0 0;
+    outline: 0;
+    display: block;
+    width: 220px;
+    height: 44px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+.ann_select {
+	width: 220px;
+	height: 44px;
+	border: 1px solid #d3d3d3;
+	padding: 0 15px;
+	border-radius: 5px;
+	font-size: 14px;
+	outline: none;
+	display: inline-block;
+    color: #222;
+}
+
+.ann_content_box .ann_submit_row {
+	display: block;
+    margin: 0;
+	padding: 10px 0;
+	text-align: center;
+}
+
+
+.ann_submit_area {
+	margin: 15px auto;
+}
+
+.ann_submit_area .btn_submit {
+	padding: 0;
+    margin: 0;
+    border: none;
+	background: #ececec;
+    cursor: default;
+    display: block;
+    width: 350px;
+    height: 44px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 400;
+    letter-spacing: -.21px;
+    color: #222;
+    text-align: center;
+    display: inline-block;
+}

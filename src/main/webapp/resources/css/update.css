@@ -1,0 +1,422 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.mypage_left_div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mypage_update_container {
+	width: 1120px;
+    margin: 53px auto 82px;
+    position: relative;
+}
+
+/* .top_banner { */
+/* 	top: 36px; */
+/* 	position: static; */
+/* 	display: block; */
+/* 	width: 740px; */
+/*     margin: 0 auto; */
+/*     padding: 0 60px; */
+/*     text-align: center; */
+/* } */
+
+
+/* 본문 */
+.mypage_update_box {
+	display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+.mypage_center_c {
+    display: inline-block;
+}
+
+.mypage_center_i {
+	display: inline-block;
+}
+
+.mypage_title {
+	display: block;	
+    padding-bottom: 20px;    
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -.24px;
+    color: #222;
+}
+
+.inbox {
+    position: relative;
+}
+
+.update_box {
+	margin-bottom: 80px;
+}
+
+.update_box .inbox {
+    border-top: #d3d3d3 1px solid;
+    padding: 0px auto;
+}
+
+.update_box .inbox .inner {
+    max-width: 800px;    
+    margin: 30px 5px;
+}
+
+.update_box .inbox .inner .update_info {
+	padding-bottom: 10px;
+}
+
+.row {
+    display: block;
+    margin: 15px;
+    padding: 0;
+}
+
+.update_box .row .update_name {
+    float: left;
+    width: 120px;
+    margin-right: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -.24px;
+    color: #222;
+    position: relative;
+}
+
+.update_box .row .update_input {
+	font-size: 22px;
+	font-weight: 300;
+	margin-top: 0;
+    overflow: hidden;
+    padding-right: 140px;
+    position: relative;
+    display: block;
+}
+
+.update_box .row .update_input [type=radio] {
+	display: none;
+}
+
+.update_box .row .update_input .gender_label {
+   	width: 167px;
+	height: 44px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #222;	
+    border-radius: 5px;
+	display: inline-block;
+	margin-right: 10px;
+	text-align: center;
+	padding: 14px;
+	border: solid 1px #d3d3d3;
+}
+
+.update_box label {
+	cursor: pointer;
+}
+
+.gender_label.active {
+	background-color: #ffcd32;
+}
+
+.update_box .row .update_input .textBox {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    display: block;
+    width: 350px;
+    height: 44px;
+    margin-right: 110px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+.update_box .row .update_input .textbox_long{
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 150px;
+    height: 44px;
+    margin-right: 10px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;	
+}
+
+.update_box .row .update_input .textbox_short {
+	position: relative;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    width: 85px;
+    height: 44px;
+    margin-right: 10px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;	
+}
+
+.update_box .row .update_input .btn {
+    border: none;
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 44px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 700;
+    letter-spacing: -.21px;
+    color: #787878;
+    background: #ececec;
+    text-align: center;
+}
+
+.update_box .inbox .anniversary_box {
+	display: block;
+	margin-top: 50px;
+    border-top: #d3d3d3 1px solid;
+    padding-top: 30px;
+}
+
+.update_box .inbox .anniversary_box .anniversary {
+	border: 1px solid #ffcd32;
+	border-radius: 5px;
+	margin: 25px 10px 10px;
+	padding: 30px 30px;
+}
+
+.update_box .inbox .anniversary_box .anniversary .comment {
+	display: block;
+	text-align: center;
+	line-height: 20px;
+}
+
+.textSubject {
+	color: #000000;
+	font-size: 22px;
+	font-weight: bold;
+	padding: 5px auto;
+}
+		
+.textNormal {
+	color: #878787;
+	font-size: 14px;
+	font-weight: 300;
+	text-align: center;
+	padding: 5px auto;
+}	
+
+.update_box .inbox .anniversary_box .anniversary .ann_table {
+	display: block;
+}
+
+.textRed {
+	color: #FF0000;
+}
+		
+.textGreen {
+	color: #46cfa7;
+	font-weight: bold;
+	font-size: 16px;
+	letter-spacing: -0.5px;
+}
+
+.textBlack {
+	color: #000000;
+	font-size: 14px;
+	font-weight: 500;
+	text-align: center;
+}		
+
+#annInsert {
+	margin: 40px auto;
+	border: none;
+	width: 100%;
+	text-align: center;			
+}
+	
+#annInsert td{
+	padding-top: 5px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #efefef;
+}
+
+.d_day_cell {
+	width: 80px;
+	color: #46cfa7;
+	font-size: 16pt;
+	height: 20px;
+	font-weight: bold;
+}
+
+.date_cell {
+	width: 150px;
+	color: #676767;
+	font-size: 18px; 
+}
+
+.ann_name_cell {
+	text-align: left;
+	width: 250px;
+	color: #676767;
+	font-size: 18px;
+}
+		
+.repeat_cell {
+	width: 100px;
+	color: #676767;
+	font-size: 18px; 
+}
+
+.update_cell, .delete_cell {
+	width: 50px;
+	color: #979797;
+	font-size: 15px;
+	text-decoration: underline;
+}	
+
+.anniversary_box .anniversary .ann_submit .btn {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    min-width: 145px;
+    height: 40px;
+    padding: 0 15px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: #ffcd32 1px solid;
+    background-color: #ffcd32;
+    font-size: 13px;
+    line-height: 38px;
+    font-weight: 300;
+    letter-spacing: -.18px;
+    color: #222;
+}
+
+.member_submit {
+    max-width: 750px;
+    margin: 20px auto 0;
+    padding-top: 40px;
+    border-top: #d3d3d3 1px solid;
+}
+
+.member_submit .more_info {
+    margin: 30px auto;
+    text-align: center;
+	font-size: 16px;
+	color: #222;
+}
+
+.member_submit .member_update {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.member_submit .member_update .btnUpdate {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    display: block;
+    width: 350px;
+    height: 48px;
+    background: #ececec;
+    color: #787878;
+    text-align: center;
+    font-size: 14px;
+    line-height: 48px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    border-radius: 5px;
+}
+
+.member_submit .member_update .btnUpdate:hover {
+	background: #ffcd32;	
+}
+
+.member_submit .member_delete .row_del {
+	margin-top: 10px;
+    text-align: right;
+}
+
+.member_submit .member_delete .row_del .btnDel {
+	padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    cursor: pointer;
+    display: inline-block;
+    height: 38px;
+    padding: 0 35px;
+    border: #d3d3d3 1px solid;
+    border-radius: 19px;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 36px;
+    font-weight: 100;
+    letter-spacing: -.18px;
+    color: #787878;
+}
+
+
+

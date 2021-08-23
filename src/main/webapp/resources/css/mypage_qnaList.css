@@ -1,0 +1,315 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Noto Sans KR',sans-serif,NanumGothic,'나눔고딕',Dotum,'돋움',Helvetica,"Apple SD Gothic Neo";
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.qnaList_div {
+	width: 1120px;
+	height: 498.8px;
+	margin-left: 65px;
+	display: inline-block;
+    vertical-align: top;
+    height: 1080px;
+    width: 68%;
+    padding-bottom: 40px;
+}
+
+.qnaList_article {
+	width: 761.6px;
+	height: 360px;
+	padding-top: 40px;
+	padding: 0;
+	display: block;
+}
+
+.qnaList_h3 {
+	width: 761.6px;
+	height: 32.8px;
+	position: relative;
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.qnaList_h3:after {
+	content: '';
+    display: block;
+    clear: both;
+}
+
+/* .qnaList_article */
+/* .qnaList_h3 */
+.qnaList_span {
+	width: 114.04px;
+	height: 32.8px;
+	font-size: 18px;
+    line-height: 33px;
+    font-weight: 500;
+    letter-spacing: -.44px;
+    color: #222;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    outline-width: 1px;
+}
+
+/* .qnaList_article */
+/* .qnaList_h3 */
+.qnaList_a {
+	width: 164.41px;
+	height: 46px;
+	position: absolute;
+    top: -6px;
+    right: 0;
+    display: inline-block;
+    height: 46px;
+    padding: 0 45px;
+    background-color: #f7f7f7;
+    border: #f7f7f7 1px solid;
+    border-radius: 23px;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+.qnaList_p {
+	width: 761.6px;
+	height: 105px;
+	margin-top: 10px;
+    padding-top: 20px;
+    border-top: #d3d3d3 1px solid;
+    padding: 0;
+    background-color: transparent;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.qnaList_p
+.qnaList_span2 {
+	padding-left: 12px;
+    font-size: 16px;
+    margin-top: 10px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: -.24px;
+    color: #222;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.qnaList_div2 {
+	width: 761.6px;
+	height: 126px;
+	margin-top: 40px;
+	display: block;
+}
+
+.qnaList_div3 {
+	width: 761.6px;
+	height: 126px;
+	display: block;
+    border-top: #d3d3d3 1px solid;
+    border-bottom: #ececec 1px solid;
+}
+
+.qnaList_table {
+	position: relative;
+    width: 100%;
+    border: none;
+    outline: 0;
+    border-collapse: collapse;
+    display: table;
+    text-indent: initial;
+    border-spacing: 2px;
+    text-align: center;
+}
+
+thead {
+	width: 761.6px;
+	height: 60px;
+	display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+	width: 761.6px;
+	height: 60px;
+	display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+.qnaList_th {
+	padding: 20px;
+    background-color: #f7f7f7;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: 500;
+    text-align: -internal-center;
+}
+
+.qnaList_span3 {
+	font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+tbody {
+	width: 761.6px;
+	height: 128px;
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.qnaList_td {
+	width: 167.55px;
+	height: 64px;
+	text-align: center;
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.qnaList_td2 {
+	width: 441.73px;
+	height: 64px;
+	border-left: #ececec 1px solid;
+	position: relative;
+	padding: 20px;
+}
+
+.qnaList_span4 {
+	font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: -.24px;
+    color: #222;
+}
+
+.qnaList_th2 {
+	width: 167.55px;
+	height: 250.5px;
+	padding: 20px;
+    background-color: #f7f7f7;
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: 500;
+    text-align: -internal-center;
+}
+
+.qnaList_span7 {
+	padding-left: 25px;
+/* 	position: relative; */
+    display: inline-block;
+	font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+ 
+}
+
+.qnaList_span5 {
+	margin-top: 10px;
+	padding-left: 0;
+	display: inline-block;
+	font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: -.21px;
+    color: #222;
+	font-size: 13px;
+}
+
+.qnaList_span6 {
+	display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: -.21px;
+    color: #787878;
+}
+
+.qnaList_td3 {
+	width: 441.73px;
+	height: 64px;
+	border-left: #ececec 1px solid;
+	position: relative;
+	padding: 56px;
+}
+
+/* .qnaList_answer::before { */
+/* 	content: ''; */
+/* 	display: block; */
+/*     position: absolute; */
+/* 	background-image: url(../img/kukka.png); */
+/*     background-position: -272px -775px; */
+/*     width: 24px; */
+/*     height: 24px; */
+/*     background-size: 1252px 845px; */
+/*     top: 117px; */
+/*     left: 35px; */
+/* } */
+
+.qnaList_div4 {
+	width: 441.73px;
+	height: 250.5px;
+	margin-top: 100px;
+    margin-left: 255px;
+}
+
+.qnaList_span8 {
+	font-size: 17px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+

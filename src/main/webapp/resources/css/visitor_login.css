@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+.container {
+		display: flex;
+		width: 1240px;
+		margin: 100px auto;
+	}
+
+body {
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: 16px;
+	font-family: 'Noto Sans KR', sans-serif, NanumGothic, '나눔고딕', Dotum,
+		'돋움', Helvetica, "Apple SD Gothic Neo";
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+
+.visitorLogin_all{
+	width: 730px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#visitorLogin_title{
+	font-size: 30px;
+	margin: 10px;
+	padding: 10px;
+}
+
+
+#visitorLogin_inp{
+	width: 300px;
+	height: 50px;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+	font-size: 18px;
+	border: 2px solid #FFD228;
+		
+}
+
+
+#visitorLogin_smt{
+	width: 200px;
+	height: 50px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #46cfa7;
+	border: none;
+	font-size: 15px;
+	font-weight: 500;
+	color: #f7f7f7;
+}
+
+
+
+
+
+#visitorLogin_btn{
+	width: 200px;
+	height: 50px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #aaaaaa;
+	border: none;
+	font-size: 15px;
+	font-weight: 500;
+	color: #f7f7f7;
+}

@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+.container {
+		display: flex;
+		width: 1240px;
+		margin: 100px auto;
+	}
+
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+a, input[type=button], button, input[type=submit] {
+  cursor: pointer;
+}
+/* 로그인 */
+.login_all {
+	margin: 0px auto;
+	text-align: center;
+	width: 750px;
+	clear: both;
+	height: 1000px;
+}
+
+#login {
+	margin: 30px;
+}
+
+#log_img {
+	width: 50px;
+	height: 50px;
+	object-fit: cover;
+	margin: 10px;
+}
+
+.loginbutton {
+	background: #ffcd32;
+	border: none;
+	border-radius: 5px;
+	width: 300px;
+	height: 50px;
+	margin: 20px;
+	font-weight: 700;
+	font-size: 15px;
+	color: #222;
+}
+
+.joinbutton {
+	background: #74cca9;
+	border: none;
+	border-radius: 5px;
+	width: 300px;
+	height: 50px;
+	margin: 20px 10px 10px 10px;
+	font-weight: 700;
+	font-size: 15px;
+	color: white;
+}
+.loginsubmit {
+	background: #ececec;
+	border: none;
+	border-radius: 5px;
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	font-weight: 700;
+	font-size: 15px;
+	color: #787878;
+}
+
+
+
+#p1 {
+	color: #46cfa7;
+	font-weight: 700;
+}
+
+#inp {
+	border: 1px solid #969696;
+	border-radius: 5px;
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	padding: 0 20px; /*로그인창 여백*/
+	text-align: left;
+	font-size: 15px;
+}
+
+#fin {
+	width: 300px;
+	height: 50px;
+	margin: 10px;
+	padding: 10px;
+	text-decoration: none;
+	color: #969696;
+	font-weight: 700;
+	border: none;
+}
+
+#sns, #now {
+	margin-top: 20px;
+	font-weight: 400;
+	font-size: 13px;
+	color: #222;
+}
+
+#checklogin {
+	font-weight: 300;
+	text-align: left;
+}
+
+#nonmember {
+	font-weight: 700;
+	font-size: medium;
+	margin-bottom: 50px;
+}
+/* 아이디찾기 */
+#joinnumber {
+	font-weight: 500;
+	font-size: medium;
+	margin: 10px;
+	padding: 10px;
+	
+}
+.find{
+	margin: 0px auto;
+	text-align: center; 
+}
+.find_class{
+	margin: 0px auto;
+	width: 650px;
+	height: 100px;
+}
+#phone {
+	width: 90px;
+	height: 40px;
+	border: 1px solid #969696;
+	border-radius: 10px;
+/* 	margin-top: 30px; */
+	margin-bottom: 30px;
+}
+
+#call {
+	font-weight: 300;
+	font-size: small;
+}
+
+h1 {
+	margin-top: 50px;
+}

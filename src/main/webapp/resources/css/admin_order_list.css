@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.search {
+		display: flex;
+		margin-top: 50px;
+		justify-content: flex-start;
+	}
+	#order_status {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 770px;
+		height: 70px;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	#order_status h2 {
+		
+		height: 50px;
+		font-size: 25px;
+		padding-top: 12px;
+		align-items: center;
+	}
+	fieldset {
+		width: 800px;
+		padding: 10px;
+		border-radius: 10px;
+		border: 2px solid #ccc;
+	}
+	

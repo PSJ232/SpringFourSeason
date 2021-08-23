@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.btn_m{
+  width: 121px;
+  height: 39px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.btn_yellow{
+  background-color: #ffcd32;
+}
+
+.btn_gray{
+  background-color: #ececec;
+}
+
+.btn_wide {
+    height: 52px;
+    width: 267px;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 36px 0;
+    cursor: pointer;
+}

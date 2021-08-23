@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+.tabs {
+	list-style: none;
+	display: flex;
+}
+
+.tabs li{
+	width: 360px;
+	background: none;
+    cursor: pointer;
+    font-size: 15px;
+    color: #8e8d8d;
+    font-weight: 300;
+    padding: 13px 0;
+    text-align: center;
+}  
+
+.tab-content {
+	display: none;
+}
+
+.current {
+	display: inherit;
+}
+
+.tabs .current_clicked {
+	border: 1px solid #e0e0e0;
+	border-bottom: none;
+	border-top: 2px solid #ffcd32;
+}
+
+.tab-link {
+	border: 1px solid #e0e0e0;
+}
+
+/* 본문 */
+.mypage_orderHistory_all {
+	display: inline-grid;
+	position: relative;
+	margin-left: 108px;
+}
+
+#mypage_orderHistory_title {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 35px;
+	margin-bottom: 15px;
+}
+
+.mypage_orderHistory_main {
+	margin-top: 39px;
+}
+
+#mypage_orderHistory_table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	border-top: 1px solid gray;
+}
+
+.mypage_orderHistory_head th:first-child span {
+	padding: 0px 38px;
+	display: inline-block;
+}
+
+.mypage_orderHistory_head th span {
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.mypage_orderHistory_head th {
+	background-color: #f7f7f7;
+	border-top: 1px solid #d2d1d1;
+	padding: 20px 15px;
+}
+
+.mypage_orderHistory_head th:not(:last-child) {
+	border-right: 1px solid #e8e8e8;
+}
+
+.mypage_orderHistory_can {
+	width: 100%;
+	height: 200px;  /* 상품내용 부분 높이조절 */
+	text-align: center;
+}
+
+.mypage_orderHistory_can tr td span {
+	display: block;
+	margin: 18px 0;
+	font-size: 15px;
+	color: #222;
+}
+
+/* -------------------------  */
+#mypage_orderHistory_situation {
+	text-align: center;
+	font-size: 15px;
+	border-bottom: 1px solid #eeeeee;
+	font-weight: 400;
+	color: #222;
+}
+
+#mypage_orderHistory_td {
+	text-align: left;
+	border-bottom: 1px solid #eeeeee;
+}
+
+#mypage_orderHistory_img {
+	width: 120px;
+	height: 120px;
+	float: left;
+	margin-right: 20px;
+}
+
+#mypage_orderHistory_span_one {
+	font-weight: 400;
+	margin: 7px;
+	font-size: 15px;
+	color: #222;
+}
+
+#mypage_orderHistory_span_two {
+	margin: 3px;
+	font-size: 13px;
+	font-weight: 300;
+	color: #999999;
+}
+
+#mypage_orderHistory_btn {
+	width: 80px;
+	height: 30px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #FFD228;
+	border: none;
+	font-size: 15px;
+	font-weight: 500;
+	color: #f7f7f7;
+}
+
+.mypage_confirmPurchase_all {
+	text-align: center;
+/* 		margin-top: 150px; */
+	line-height: 2.0;
+}
+
+#mypage_confirmPurchase_h1 {
+	font-size: 30px;
+	font-weight: 700;
+	margin-bottom: 50px;
+}
+
+#mypage_confirmPurchase_h3 {
+	font-size: 20px;
+	font-weight: 500;
+}
+
+#mypage_confirmPurchase_cbtn {
+	width: 80px;
+	height: 30px;
+	margin: 10px;
+	border-radius: 10px;
+	background-color: #aaaaaa;
+	border: none;
+	font-size: 15px;
+	font-weight: 500;
+	color: #f7f7f7;
+}
+
+
+
+#mypage_orderHistory_td dt {
+	text-align: left;
+} 
+
+#mypage_orderHistory_td dl {
+	height: 160px;
+	padding: 22px 0 0px 20px;
+	border-right: solid 1px #eeeeee;
+	border-left: solid 1px #eeeeee;
+}
+
+#mypage_orderHistory_situation span {
+	font-size: 12px;
+	font-weight: 500;
+	color: #49e497;
+}

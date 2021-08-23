@@ -1,0 +1,224 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.mypage_left_div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* 본문 */
+.hidden{
+	display: none;
+}
+
+.mypage_delete_container {
+	width: 1120px;
+    margin: 53px auto 82px;
+    position: relative;
+}
+
+.mypage_delete_box {
+	display: inline-block;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 0px;
+}
+
+
+.mypage_center_c {
+    display: inline-block;
+}
+
+.mypage_center_i {
+	display: inline-block;
+}
+
+.delete_notice_title {
+	display: block;	
+    padding-bottom: 20px;    
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -.24px;
+    color: #222;
+}
+
+.inbox {
+    position: relative;
+}
+
+.delete_box {
+    padding-bottom: 50px;
+    color: #3a3a3a;
+}
+
+.delete_box .inbox {
+    padding: 15px 10px;
+    border-top: #aaa 1px solid;
+    line-height: 18px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.delete_box .inner {
+	max-width: 780px;
+    margin: 30px 5px;
+}
+
+.delete_box .inner .delete_form_wrap {
+    position: relative;
+}
+
+.delete_box .inner .delete_form_wrap .delete_notice {
+    padding: 15px 10px;
+    border-top: #aaa 1px solid;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.delete_box .inner .delete_form_wrap .delete_notice .bold {
+	font-weight: 500;
+}
+
+.delete_title {
+    padding: 25px 15px;
+    line-height: 36px;
+    font-size: 22px;
+}
+
+.sadly_bye {
+	display: block;	
+    padding-bottom: 20px;    
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -.24px;
+    color: #222;
+}
+
+.row {
+    display: block;
+    margin: 15px;
+    padding: 0;
+}
+
+.password_check {
+    border-top: #bfbfbf 1px solid;
+    color: #3a3a3a;
+}
+
+.password_check .delete_name {
+    float: left;
+    width: 140px;
+    margin-right: 10px;
+    padding-top: 10px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -.24px;
+    color: #222;	
+    position: relative;
+}
+
+.password_check .delete_input {
+	font-size: 22px;
+	font-weight: 300;
+	margin-top: 0;
+    overflow: hidden;
+    padding-right: 30px;
+    position: relative;
+    display: block;
+}
+
+.password_check .row .delete_input .textBox {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    outline: 0;
+    display: block;
+    width: 350px;
+    height: 44px;
+    margin-right: 80px;
+    padding: 0 20px;
+    border-radius: 5px;
+    border: #d3d3d3 1px solid;
+    font-size: 14px;
+    line-height: 44px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+.password_check .row .delete_input .delete_reason{ 
+    padding: 0;
+    margin: 0;
+    border: 1px solid #d3d3d3;
+    background: 0 0;
+    outline: 0;
+    width: 510px;
+    height: 180px;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 13px;
+    font-weight: 100;
+    color: #3a3a3a;
+}
+
+.delete_submit {
+	margin: 5px auto;
+}
+
+.delete_submit .member_delete {
+	margin-left: 40px;
+	display: flex;
+	flex-direction: row;    
+    padding: 0 5px;
+}
+
+.btn_delete {
+    float: right;
+    width: 250px;
+    height: 62px;
+    margin-top: 30px;
+    margin-right: 80px;
+    border: #626262 1px solid;
+    background: #626262;
+    font-size: 22px;
+    line-height: 62px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
+
+
+

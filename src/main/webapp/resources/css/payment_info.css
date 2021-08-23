@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  
+}
+
+.purchase_complete_container {
+    padding-bottom: 100px;
+}
+
+.purchase_complete_container .checkout {
+    padding: 80px 20px;
+    background-color: #ffcd32;
+    text-align: center;
+}
+
+.purchase_complete_container .checkout .checkout_title {
+    font-size: 38px;
+    line-height: 32px;
+    font-weight: 700;
+    letter-spacing: -.3px;
+    color: #0d0d0d;
+}
+
+.purchase_complete_container .checkout .checkout_desc {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #3a3a3a;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.purchase_complete_container .checkout .checkout_order_num {
+    display: block;
+    width: 350px;
+    padding: 15px 15px;    
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #3a3a3a;
+}
+
+.purchase_complete_container .checkout .bank_info {
+    display: block;
+    max-width: 350px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.purchase_complete_container .checkout .bank_info .th {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+}
+
+.purchase_complete_container .checkout .bank_info .th .span_th {
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 200;
+    letter-spacing: -.2px;
+    color: #787878;
+}
+
+.purchase_complete_container .checkout .bank_info .td {
+    display: block;
+}
+
+.purchase_complete_container .checkout .bank_info .td .span_td:first-of-type {
+	margin-top: 10px;
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: -.2px;
+    color: #787878;
+}
+
+
+.purchase_complete_container .checkout .bank_info .td .span_td {
+    font-size: 13px;
+    line-height: 20px;
+    font-weight: 100;
+    letter-spacing: -.2px;
+    color: #787878;
+}
+
+.purchase_complete_container .checkout .bank_info .td .span_td .info_name {
+    display: block;
+    float: left;
+    min-width: 90px;
+    padding-right: 10px;
+}
+
+.purchase_complete_container .checkout .info_more {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #3a3a3a;
+    margin-top: 20px;
+}
+
+.checkout_submit_box {
+	padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.submit_button {
+    margin: 0 auto;
+}
+
+.submit_button .submit_row {
+    position: relative;
+    display: flex;
+   	width: 800px;
+    justify-content: center;    
+    margin: 0 auto;
+}
+
+.submit_button .submit_row .submit_col {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.submit_button .shop_continue {
+    padding: 0;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 350px;
+    height: 48px;
+    background: #ececec;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+    border-radius: 5px;
+}
+
+.submit_button .show_detail {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    display: block;
+    width: 350px;
+    height: 48px;
+    background: #ffcd32;
+    text-align: center;
+    font-size: 18px;
+    line-height: 48px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

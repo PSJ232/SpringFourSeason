@@ -1,0 +1,294 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Noto Sans KR',sans-serif,NanumGothic,'나눔고딕',Dotum,'돋움',Helvetica,"Apple SD Gothic Neo";
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+a, button {
+  cursor: pointer;
+}
+
+.memberPoint_article {
+	width: 761.6px;
+	height: 540.4px;
+	float: right;
+/* 	padding-top: 40px; */
+	display: block;
+	
+}
+
+.memberPoint_h3 {
+	width: 761.6px;
+	height: 32.8px;
+	display: block;
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.memberPoint_span {
+	font-size: 22px;
+    line-height: 33px;
+    letter-spacing: -.44px;
+    color: #222;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    font-weight: normal;
+	
+}
+
+.memberPoint_div {
+	width: 761.6px;
+	height: 447.6px;
+	margin-top: 20px;
+	display: block;
+}
+
+dl {
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.memberPoint_dl {
+	width: 761.6px;
+	height: 108.8px;
+	padding: 40px 20px;
+    background-color: #f7f7f7;
+    font-size: 20px;
+    line-height: 29px;
+    font-weight: 300;
+    letter-spacing: -.3px;
+    color: #222;
+    text-align: center;
+    display: block;
+    outline-width: 1px;
+    margin: 0;
+}
+
+.memberPoint_dt {
+	height: 28.8px;
+	display: inline-block;
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    font-weight: normal;
+}
+
+.memberPoint_dd {
+	width: 70px;
+	height: 28.8px;
+	margin: 0 0 0 30px;
+	margin-top: 0;
+    margin-left: 30px;
+    display: inline-block;
+    font-weight: bold;
+    color: #46cfa7;
+    margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+}
+
+.memberPoint_div2 {
+	width: 761.6px;
+	height: 188.4px;
+	padding: 40px 0 0;
+	padding-top: 40px;
+	display: block;
+}
+
+.memberPoint_div3 {
+	width: 761.6px;
+	height: 188.4px;
+	display: block;
+}
+
+.memberPoint_div4 {
+	width: 761.6px;
+	height: 26.4px;
+}
+
+h4 {
+	margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.memberPoint_h4 {
+ 	width: 117.81px;
+	height: 26.4px;
+	margin: 0 10px 0 0;
+	margin-right: 10px;
+    font-size: 16px;
+    line-height: 27px;
+    letter-spacing: -.27px;
+    color: #222;
+    display: block;
+    float: left;
+    font-weight: normal;
+ }
+
+.memberPoint_div5 {
+	width: 761.6px;
+	height: 107px;
+	margin-top: 15px;
+}
+
+.memberPoint_div6 {
+	width: 761.6px;
+	height: 107px;
+	display: block;
+}
+
+table {
+	border-collapse: collapse;
+	margin: 0;
+    padding: 0;
+    letter-spacing: -.5px;
+    outline-width: 1px;
+    display: table;
+    text-indent: initial;
+/*     border-spacing: 2px; */
+    border-color: silver;
+    
+}
+
+.memberPoint_table {
+	width: 761.6px;
+	height: 107px;
+	display: table;
+}
+
+caption {
+    display: table-caption;
+    text-align: -webkit-center;
+}
+
+.memberPoint_caption {
+	position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+}
+
+colgroup {
+	width: 761.6px;
+	height: 106.5px;
+    display: table-column-group;
+}
+
+col {
+    display: table-column;
+}
+
+thead {
+	width: 761.6px;
+	height: 56px;
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+tr {
+	width: 761.6px;
+	height: 56px;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    
+}
+
+.memberPoint_div6, 
+.memberPoint_table tr th,
+.memberPoint_table tr td {
+	border-right : 1px thin silver;
+	border-bottom: thin silver;
+	font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: -.21px;
+    color: #222;
+    text-align: center;
+	
+	
+}
+.memberPoint_table thead th {
+    padding: 18px 10px;
+    background-color: #f7f7f7;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    width: 160px;
+    height: 56px;
+}
+
+.memberPoint_span2 {
+	 padding: 18px 10px;
+    font-weight: normal;
+    background-color: #f7f7f7;
+}
+
+tbody {
+	width: 761.6px;
+	height: 50.5px;
+	display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+td {
+	width: 152.31px;
+	height: 50.5px;
+	
+}
+
+.memberPoint_span3 {
+	color: #46cfa7;
+	font-weight: 500;
+}
+
+.memberPoint_span4 {
+	font-weight: 100;
+	font-weight: 800;
+}
+

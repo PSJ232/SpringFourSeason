@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.btn {
+		border: 1px solid #fff;
+		border-radius: 5px;
+		background-color: #FFDF24;
+		width: 50px;
+		height: 30px;
+	}
+	.btn:hover {
+		background-color: #EDD200;
+		cursor: pointer;
+	}
+	#check_result {
+		font-weight: bold;
+	}
+	#tracking_num {
+		border: none;
+		outline: none;
+		border-bottom: 2px solid #ccc;
+	}
+	#form {
+		border: 2px solid #FFDF24;
+		height: 225px;
+		border-radius: 5px;
+	}
+	#title {
+		text-align: center;
+	}
+	#container {
+		margin-left: 100px;
+	}

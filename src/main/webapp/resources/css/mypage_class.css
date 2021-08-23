@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+#myclass_container {
+	display: inline-block;
+    position: relative;
+    margin-left: 108px;
+}
+
+.my_title {
+	font-size: 22px;
+    font-weight: 500;
+    line-height: 35px;
+}
+
+.myclass_box {
+	margin: 25px 0;
+}
+
+.myclass_list_layout {
+	border-spacing: 0;
+}
+
+.myclass_list_head th {
+	padding: 20px 9px;
+	border-top: #d0d0d0 1px solid;
+	background-color: #f7f7f7;
+	
+}
+
+.myclass_list_head2 th {
+	padding: 20px;
+	border-top: #d0d0d0 1px solid;
+	background-color: #f7f7f7;
+	
+}
+
+.myclass_list_head th:first-child,
+.myclass_list_head2 th:first-child {
+	border-right: #ececec 1px solid;
+}
+
+.myclass_list_head th span,
+.myclass_list_head2 th span {
+	display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0 42px;
+}
+
+#myclass_list_body {
+	
+}
+
+#planned_myclass_list tr td:first-child,
+#past_myclass_list tr td:first-child {
+	font-size: 16px;
+    text-align: center;	
+}
+
+#planned_myclass_list tr td:last-child {
+	text-align: center;
+}
+
+.myclass_info_box {
+	padding: 30px;
+}
+
+.myclass_place {
+	border: 1px solid #a27fde;
+    border-radius: 25px;
+    padding: 1px 6px;
+    margin-right: 4px;
+    color: #a27fde;
+    font-weight: 500;
+}
+
+.myclass_info_box div:first-child {
+	line-height: 20px;	
+}
+
+.myclass_info_box div:first-child h4 {
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.myclass_info_box div {
+    margin-bottom: 3px;
+}
+
+.myclass_info_box div span:not(.myclass_place) {
+	font-size: 13px;
+    margin-right: 4px;
+}
+
+.myclass_info_box > span {
+	display: block;
+    font-size: 14px;
+    line-height: 13px;
+    margin-bottom: 4px;
+}
+
+.past_myclass {
+/* 	display: none; */
+}
+
+#past_myclass_list {
+	background-color: #f7f7f7;
+    height: 100px;
+}
+
+#past_myclass_list tr td {
+	border-top: #ececec 1px solid;
+    font-size: 14px;
+    color: #737272;
+}
+
+.planned_myclass_nothing {
+	height: 430px;
+}
+
+.planned_myclass_nothing td button {
+	margin: 30px auto;
+}
+
+
+.class_cancle_btn {
+    width: 95px;
+    height: 38px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;	
+}
+
+.class_cancle_btn:hover {
+	color:black;
+	background-color: #FFD228;
+}
+
+
+
+
+
+

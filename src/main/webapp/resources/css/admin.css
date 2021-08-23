@@ -1,0 +1,669 @@
+@charset "UTF-8";
+
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+}
+
+a,
+a:active,
+a:visited {
+  text-decoration: none;
+}
+
+
+a, button {
+  cursor: pointer;
+  color: black;
+}
+
+
+/*admin_header*/
+
+header {
+    position: fixed;
+    top: 0;
+    height: 68px;
+    width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #ffcd32;
+    z-index: 300;
+}
+
+.admin_header {
+	padding: 23px 82px;
+}
+
+.admin_header div {
+	display: inline-block;
+}
+
+
+.admin_header_title {
+    position: relative;
+    top: 2px;
+    font-size: 27px;
+    color: #a9a7a7;
+    margin-right: 11px;
+}
+
+.admin_header_subtitle {
+    position: relative;
+    top: 2px;
+    font-size: 20px;
+    color: #000;
+}
+
+.customerpage {
+	float: right;
+}
+
+.customerpage a {
+	color: #a9a7a7;
+	font-size: 18px;
+	margin-right: 10px;
+}
+
+.customerpage a:hover {
+	color: #ffcd32;
+}
+
+/*////////////////////////// 상품관리 /////////////////////////////*/
+
+/* 상품관리 목록 */
+
+.product_title_box {
+	margin: 0 10px 30px;
+    height: 60px;
+}
+
+.product_title {
+	position: relative;
+    top: 19px;
+    left: 24px;
+    font-size: 32px;
+}
+
+.product_title_box input {
+	float: right;
+}
+
+
+
+/* util */
+.fontsize_zero{
+  font-size: 0;   /*inline 요소간에 빈공간 제거*/
+}
+
+.fontweight_600{
+  font-weight: 600;
+}
+
+.menu_fixed{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #ffcd32;
+
+}
+
+#container {
+  max-width: 1240px;
+  margin: 100px auto;
+  padding: 0 60px;
+}
+
+
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT License
+ *
+ *
+ * If you are thinking of using this in
+ * production code, beware of the browser
+ * prefixes.
+ */
+
+#admin_nav{
+    position: fixed;
+    z-index: 100;
+    font-family: 'Noto Sans KR',sans-serif,NanumGothic,'나눔고딕',Dotum,'돋움',Helvetica,"Apple SD Gothic Neo";
+	top: 60px;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 57px;
+  left: 48px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: #ffcd32;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  height: 101vh;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+
+/*item_manage > itemManageList.jsp */
+/* category */
+
+.category_header {
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.category_img {
+  background-image: url(../img/category_flower_w.png);
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  background-color: #eeece8;
+}
+.category_table {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 63px 60px 0;
+}
+.category_title {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px 0;
+}
+.category_detail {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 100;
+  letter-spacing: -.27px;
+  color: #222;
+}
+/* product 정렬 select */
+.product_array_box {
+  margin: 20px 10px;
+  text-align: right;
+
+}
+
+.product_array{
+  width: 90px;
+  height: 29px;
+  border: transparent;
+  font-size: 16px;
+}
+
+.product_array:focus{
+  outline: none;
+}
+
+.product_order_list{
+  font-size: 15px;
+}
+
+/* product list */
+
+#product_list {
+  display: inline-block;
+  width: 25%;
+  padding: 0 10px;
+  font-size: 15px;
+  margin-bottom: 30px;
+
+}
+
+.product_box > a{
+  display: inline-block;
+  overflow: hidden;
+  width: 263px;
+  height: 263px;
+}
+
+
+
+.product_img {
+  object-fit: fill;
+  height: 264px;
+  width: 263px;
+  overflow: hidden;
+  transition: .4s;
+
+}
+
+.product_img:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+
+dd {
+  display: block;
+  height: 140px;
+  float: left;
+}
+
+
+.product_info_textbox {
+  display: block;
+  margin: 10px 0;
+  font-size: 17px;
+}
+
+/*admin product detail page*/
+.product_manage_box{
+  text-align: center;
+}
+
+.product_manage_layout {
+  font-size: 0;
+}
+
+.product_manage_layout li{
+  display: inline-block;
+  margin: 10px 15px;
+  text-align: center;
+}
+
+.product_manage_layout li label{
+  display: inline-block;
+  width: 85px;
+  height: 30px;
+  font-size: 15px;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.product_manage_layout li input,
+.product_manage_layout li select{
+  font-size: 15px;
+  width: 200px;
+  height: 37px;
+}
+
+.product_manage_btnbox{
+  text-align: right;
+  padding: 10px 20px;
+}
+
+.btn_m{
+  width: 121px;
+  height: 39px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  margin: 10px 5px;
+  cursor: pointer;
+}
+
+.btn_yellow{
+  background-color: #ffcd32;
+}
+
+.btn_gray{
+  background-color: #ececec;
+}
+
+
+/* sales */
+
+.sales_layout1 {
+  background-color: bisque;
+
+}
+
+.sales_layout1 {
+  background-color: bisque;
+  width: 100%;
+  height: 100px;
+  font-size: 20px;
+}
+
+.sales_layout_detail{
+  display: block;
+  margin: 10px 10px;;
+}
+
+.sales_layout_detail td{
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.sales_period_title{
+  width: 100px;
+}
+.sales_period{
+  margin-right: 10px;
+}
+
+/* footer */
+
+body, button, input, select, table, textarea {
+  font-size: 12px;
+  line-height: 16px;
+  font-family: 'Noto Sans KR',sans-serif,NanumGothic,'나눔고딕',Dotum,'돋움',Helvetica,"Apple SD Gothic Neo";
+}
+
+footer{
+  background-color: #222;
+  width: 100%;
+  padding: 30px 0;
+
+}
+
+.footer_layout{
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 60px;
+}
+
+.footer_layout_top{
+  border-bottom: 1px solid #524e4e;
+  padding: 0 0 17px 0;
+  display: block;
+  position: relative;
+}
+
+.footer_layout_down{
+  display: inline-block;
+  position: relative;
+  padding: 15px 0;
+  width: 100%;
+  color: #d3d3d3;
+}
+
+
+.footer_social{
+  margin-bottom: 5px;
+}
+
+.footer_social a{
+  display: 8px;
+  width: 32px;
+  height: 32px;
+  margin-right: 9px;
+}
+
+.footer_social a::before{
+  content: '';
+  display: inline-block;
+  background-image: url(../img/kukka.png);
+  width: 32px;
+  height: 32px;
+  background-size: 1252px 845px;
+  margin-right: 5px;
+}
+
+.social_facebook::before {
+  background-position: -42px -775px;
+}
+
+.social_instgram::before {
+  background-position: -1214px -438px;
+}
+
+.social_youtube::before{
+  background-position: -1164px -685px;
+}
+
+.footer_social a img::after{
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-size: 50px;
+  background-color: white;
+}
+
+.footer_infobox{
+  display: inline-block;
+}
+
+.customer_info1{
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 500;
+  letter-spacing: -.33px;
+  color: #f7f7f7;
+  margin-right: 10px;
+}
+
+.customer_info2{
+  display: inline-block;
+  position: relative;
+  font-size: 14px;
+  margin-right: 15px;
+  color: #a9a7a7;
+}
+
+.customer_info_btns{
+  display: inline-block;
+}
+
+.customer_info_btns a {
+  font-size: 13px;
+  background-color: #222;
+  width: 115px;
+  height: 40px;
+  color: #ffffff;
+  border: 1.5px solid #524e4e;
+  border-radius: 50px;
+  margin-right: 10px;
+  padding: 9px 17px;
+}
+.footer_right{
+  display: inline-block;
+}
+
+.footer_logo {
+  width: 150px;
+  height: 63px;
+  position: absolute;
+  top: 17px;
+  right: 0px;
+}
+
+.footer_logo::before{
+  content: '';
+  display: inline-block;
+  top: -60px;
+  right: 0;
+  background-image: url(../img/kukka.png);
+  background-position: 0 -612px;
+  width: 150px;
+  height: 63px;
+  background-size: 1252px 845px;
+}
+
+.customer_into3 tr{
+  display: block;
+  margin-bottom: 6px;
+}
+
+.customer_into3 tr td{
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+.company_info tr td {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.bar::after{
+  content: "";
+  display: inline-block;
+  position: relative;
+  width: 1.5px;
+  height: 15px;
+  background-color: #a9a7a7;
+  top: 4px;
+  left: 6px;
+}
+
+.customer_info3 {
+  position: absolute;
+  right: 0;
+}
+
+.customer_info3 a{
+  display: inline-block;
+  color: white;
+  font-size: 14px;
+  margin-left: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

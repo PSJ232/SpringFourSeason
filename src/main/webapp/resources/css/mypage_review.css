@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+.container {
+		display: flex;
+		width: 1240px;
+		margin: 100px auto;
+}
+body {
+	height: 100%;
+	box-sizing: border-box;
+	font-size: 15px;
+	line-height: 16px;
+	font-family: 'Noto Sans KR', sans-serif, NanumGothic, '나눔고딕', Dotum,
+		'돋움', Helvetica, "Apple SD Gothic Neo";
+}
+
+li {
+	list-style: none;
+	text-decoration: none;
+}
+
+a, a:active, a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+/* 리뷰, 리뷰수정 공통 작업 */
+.mypage_Review_all{
+	float: right;
+	width: 750px;
+	margin-bottom: 300px;
+	vertical-align: middle;
+}
+#mypage_Review_h2{
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+#mypage_Review_title{
+	font-size: 18px;
+	width: 500px;
+	height: 50px;	
+	
+}
+#mypage_Review_list_s{
+	margin-bottom: 20px;
+	color: #FFD228;
+	width: 300px;
+	height: 50px;
+	margin-right: 10px;
+	margin-left: 100px;
+	font-size: 15px;
+	border: 1px solid #969696;
+  	border-radius: 5px;
+  	
+}
+
+#mypage_Review_list{
+	font-size: 15px;
+	padding-left: 15px;
+	width: 500px;
+	height: 50px;
+	margin-bottom: 20px;
+	margin-left: 100px;
+	border: 1px solid #969696;
+  	border-radius: 5px;
+}
+#mypage_Review_list_t{
+	width: 500px;
+	height:auto;
+	margin: 0;
+	padding: 0;
+	clear: both;
+	margin-left: 150px;
+	margin-bottom: 20px;
+	border: 1px solid #969696;
+  	border-radius: 5px;
+  	font-size: 15px;
+  	padding: 10px;
+}
+
+.input-file-button{
+  padding: 15px 30px;
+  background-color:#969696;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+/*   float: right; */
+}
+#mypage_Review_li_inp{
+/* 	position: absolute;  */
+	width: 1px; 
+	height: 1px; 
+	padding: 0; 
+	margin: -1px; 
+	overflow: hidden; 
+	clip:rect(0,0,0,0);
+	border: 0;
+}
+#mypage_Review_smt{
+	background-color: #FFD228;
+	border-radius: 10px;
+	width: 400px;
+	height: 50px;
+	text-align: center;
+	border: none;
+	vertical-align: middle bottom;
+	margin-left: 165px;
+	margin-top: 50px;
+}
+
+
+/* mypage_reviewDelete */
+.mypage_reviewDelete_all{
+	float: right;
+	margin-top: 120px;
+	margin-right: 30px;
+	text-align: center;
+	font-size: 30px;
+	width: 750px;
+	height: auto;
+}
+#mypage_reviewDelete_smt{
+	background-color: #FFD228;
+	border-radius: 10px;
+	width: 120px;
+	height: 50px;
+	text-align: center;
+	border: none;
+	vertical-align: middle bottom;
+	margin-top: 50px;
+	margin-right: 30px;
+}
+#mypage_reviewDelete_btn{
+	background-color: #dcdcdc;
+	border-radius: 10px;
+	width: 120px;
+	height: 50px;
+	text-align: center;
+	border: none;
+	vertical-align: middle bottom;
+	margin-top: 30px;
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.search_container {
+	display: flex;
+	margin-top: 50px;
+	justify-content: flex-start;
+}
+
+.chart-div {
+	
+	display: flex;
+	margin: 0 auto;
+}
+
+#pieChartCanvas {
+	margin-left: 120px;
+}
+
+#pie {
+	margin-left: 50px;
+}
+
+.container fieldset {
+	width: 800px;
+	padding: 15px;
+	border-radius: 10px;
+	border: 2px solid #ccc;
+}

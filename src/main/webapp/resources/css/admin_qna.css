@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.container input[type=text], textarea{
+	font-size: 15px;
+	border: none;
+	outline: none;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	padding: 10px;
+	border-radius: 5px;
+	width: 500px;
+	
+}
+.container label {
+	width: 200px;
+	font-size: 17px;
+	float:left;
+}
+#title {
+	margin-bottom: 30px;
+}
+.link:hover {
+	color: #FFDF24;
+	cursor: pointer;
+}
+.btn {
+	float:right;
+}
+.btn:hover {
+	background-color: #FFCD12;
+	cursor: pointer;
+}
+#buttons {
+	margin-right: 480px;
+}
