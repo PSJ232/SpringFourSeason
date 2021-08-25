@@ -76,7 +76,7 @@ strong {
     padding: 22px 1px;
 }
 
-#mypage_top_dl {
+.mypage_top_dl {
     padding: 6px 87px;
     display: inline-block;
     text-align: center;
@@ -84,18 +84,18 @@ strong {
 
 }
 
-#mypage_top_dl:not(:last-child) {
+.mypage_top_dl:not(:last-child) {
 	border-right: 1px solid #e6e4e4;
 }
 
-#mypage_top_dt {
+.mypage_top_dt {
     font-size: large;
     font-weight: 500;
     line-height: 23px;
     text-align: left;
 }
 
-#mypage_top_dd {
+.mypage_top_dd {
 	color: #46cfa7;
     font-size: x-large;
     font-weight: 900;
@@ -120,27 +120,27 @@ strong {
 #mypage_left_menu_bottom {
 }
 
-#mypage_left_title {
+.mypage_left_title {
 	font-size: 18px;
     color: #222;
 }
 
-#mypage_menu_list {
+.mypage_menu_list {
 	width: 270px;
     margin: 18px 0px;
 }
 
-#mypage_list_a {
+.mypage_list_a {
 	color: #3a3a3a;
     font-size: 16px;
     font-weight: 300;
 }
 
-#mypage_list_a:hover {
+.mypage_list_a:hover {
 	text-decoration: underline;
 }
 
-#mypage_list {
+.mypage_list {
     padding-top: 20px;
     padding: 19px 0;
     border-bottom: 0.5px solid #e3e0e0;

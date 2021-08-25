@@ -1,5 +1,4 @@
-<%@page import="java.text.NumberFormat"%>
-<%@page import="vo.MemberBean"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -7,17 +6,11 @@
 <head>
 <meta charset="UTF-8">
 <title>사계 | 회원 탈퇴</title>
-<link rel="stylesheet" href="css/style.css" type="text/css" />
-<link href="css/mypage.css" rel="stylesheet"> 
-<link rel="stylesheet" href="css/delete.css" type="text/css" />
+<link href='<c:url value="/resources/css/style.css" />' rel="stylesheet" type="text/css">
+<link href='<c:url value="/resources/css/delete.css" />' rel="stylesheet" type="text/css">
+<link href='<c:url value="/resources/css/mypage.css" />' rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
-<%
-MemberBean mb = (MemberBean) request.getAttribute("memberMypageDetail");
-String m_id = mb.getM_id();
-String m_name = mb.getM_name();
-int m_point = mb.getM_point();
-%>
 <body>
 
 	<jsp:include page="../inc/header.jsp"></jsp:include>
@@ -37,14 +30,14 @@ int m_point = mb.getM_point();
 				<div class="inbox">
 					<div class="inner">
 					
-						<form action="MemberDeletePro.me" id="formDelete" method="post">	
+						<form action='<c:url value="/member/delete"/>' id="formDelete" method="post">
 							<div class="delete_form_wrap">
 							
 									<div class="delete_notice">
-										<span title="bold"><%=m_name %></span> 고객님, <br>
+										<span title="bold">${memberBean.m_name}</span> 고객님, <br>
 										탈퇴를 원하신다니 마음이 아프네요.<br>
 										
-										지금 탈퇴하시면 고객님의 <%=NumberFormat.getInstance().format(m_point) %> 포인트는 자동 소멸됨을 알려드립니다.<br>
+										지금 탈퇴하시면 고객님의 ${memberBean.m_point} 포인트는 자동 소멸됨을 알려드립니다.<br>
 									</div>
 				
 									<div class="delete_title">
@@ -72,7 +65,7 @@ int m_point = mb.getM_point();
 							<div class="delete_submit">
 								<div class="member_delete">
 									<input type="button" value="취소" class="btn_delete" onclick="history.back()">
-									<input type="hidden" name="m_id" value="<%=m_id%>">
+									<input type="hidden" name="m_id" value="${memberBean.m_id}">
 									<input type="submit" value="탈퇴" class="btn_delete">
 								</div>
 							</div>

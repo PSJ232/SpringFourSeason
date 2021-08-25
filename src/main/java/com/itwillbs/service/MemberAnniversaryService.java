@@ -1,18 +1,10 @@
-package com.itwillbs.dao;
-
+package com.itwillbs.service;
 
 import com.itwillbs.domain.AnniversaryBean;
-import com.itwillbs.domain.MemberBean;
 
 import java.util.List;
 
-public interface MemberDAO {
-    public void registMember(MemberBean memberBean);
-
-    public MemberBean userCheck(MemberBean memberBean);
-
-    MemberBean selectMember(String m_id);
-
+public interface MemberAnniversaryService {
     void registAnn(AnniversaryBean anniversaryBean);
 
     public List<AnniversaryBean> selectAnnList(String m_id);
@@ -22,6 +14,4 @@ public interface MemberDAO {
     void updateAnn(AnniversaryBean anniversaryBean);
 
     void deleteAnn(String a_id);
-
-    void deleteMember(MemberBean memberBean);
 }

@@ -23,4 +23,14 @@ public class MemberServiceImpl implements MemberService{
     public MemberBean userCheck(MemberBean memberBean) {
         return memberDAO.userCheck(memberBean);
     }
+
+    @Override
+    public MemberBean selectMember(String m_id) {
+        return memberDAO.selectMember(m_id);
+    }
+
+    @Override
+    public void deleteMember(MemberBean memberBean) {
+        memberDAO.deleteMember(memberBean);
+    }
 }

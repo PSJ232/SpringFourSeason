@@ -1,6 +1,8 @@
 package com.itwillbs.controller;
 
+import com.itwillbs.domain.AnniversaryBean;
 import com.itwillbs.domain.MemberBean;
+import com.itwillbs.service.MemberAnniversaryService;
 import com.itwillbs.service.MemberService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,12 +14,18 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 @Controller
 public class MemberController {
 
     @Inject
     MemberService memberService;
+
+    @Inject
+    MemberAnniversaryService memberAnniversaryService;
 
     @RequestMapping(value = "/member/join", method = RequestMethod.GET)
     public String join(){
@@ -72,5 +80,82 @@ public class MemberController {
         return "redirect:/";
     }
 
+    @RequestMapping(value = "/member/update", method = RequestMethod.GET)
+    public String update(Model model, HttpSession session, HttpServletRequest request){
+        String m_id = (String) session.getAttribute("m_id");
+        MemberBean memberBean = memberService.selectMember(m_id);
+        List<AnniversaryBean> annList = memberAnniversaryService.selectAnnList(m_id);
+        model.addAttribute("memberBean", memberBean);
+        request.setAttribute("annList", annList);
+        return "/member/update";
+    }
 
+    @RequestMapping(value = "/member/delete", method = RequestMethod.GET)
+    public String delete(HttpServletRequest request, Model model){
+        HttpSession session = request.getSession();
+        MemberBean memberBean = memberService.selectMember((String)session.getAttribute("m_id"));
+        model.addAttribute("memberBean", memberBean);
+        return "/member/delete";
+    }
+
+    @RequestMapping(value = "/member/delete", method = RequestMethod.POST)
+    public String deletePro(HttpServletRequest request, HttpServletResponse response, MemberBean memberBean){
+        memberService.deleteMember(memberBean);
+        HttpSession session = request.getSession();
+        session.invalidate();// 로그아웃처리
+
+        // 자동로그인 해제
+        Cookie cookieId = new Cookie("m_id", null);
+        cookieId.setMaxAge(0); // 쿠키삭제(엎어쓰기)
+        response.addCookie(cookieId);
+        System.out.println("쿠키삭제!!!");
+        return "redirect:/member/login";
+    }
+
+    @RequestMapping(value = "/member/anniversary/insert", method = RequestMethod.GET)
+    public String annInsert(){
+
+        return "/member/anniversary";
+    }
+
+    @RequestMapping(value = "/member/anniversary/insert", method = RequestMethod.POST)
+    public void annInsertPro(HttpServletRequest request, HttpServletResponse response, AnniversaryBean anniversaryBean) throws IOException {
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id");
+        anniversaryBean.setM_id(m_id);
+        anniversaryBean.setA_id(2);
+        memberAnniversaryService.registAnn(anniversaryBean);
+        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println("<script>");
+        out.println("opener.location.reload();");
+        out.println("window.close();");
+        out.println("</script>");
+    }
+
+    @RequestMapping(value = "/member/anniversary/update", method = RequestMethod.GET)
+    public String annUpdate(HttpServletRequest request, Model model){
+        int a_id = Integer.parseInt(request.getParameter("a_id"));
+        AnniversaryBean annDetail = memberAnniversaryService.getAnn(a_id);
+        model.addAttribute("annDetail", annDetail);
+        return "/member/anniversary";
+    }
+
+    @RequestMapping(value = "/member/anniversary/update", method = RequestMethod.POST)
+    public void annUpdatePro(AnniversaryBean anniversaryBean, HttpServletResponse response) throws IOException {
+        memberAnniversaryService.updateAnn(anniversaryBean);
+        response.setContentType("text/html; charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println("<script>");
+        out.println("opener.location.reload();");
+        out.println("window.close();");
+        out.println("</script>");
+    }
+
+    @RequestMapping(value = "/member/anniversary/delete", method = RequestMethod.GET)
+    public String annDelete(HttpServletRequest request){
+        String a_id = request.getParameter("a_id");
+        memberAnniversaryService.deleteAnn(a_id);
+        return "redirect:/member/update";
+    }
 }

@@ -1,16 +1,19 @@
-<%@page import="vo.AnniversaryBean"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>사계 | 기념일 등록하기</title>
-<link rel="stylesheet" href="css/anniversary.css" type="text/css" />
+<link rel="stylesheet" href='<c:url value="/resources/css/anniversary.css" />' type="text/css" />
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<%if (request.getAttribute("annDetail") == null) {%>
+
+<%--<%if (model.getAttribute("annDetail") == null) {%>--%>
+<c:choose>
+<c:when test="${annDetail eq null}">
 	<div class="anniversary_container">
 		<div class="page_title">
 			<span class="title">기념일 등록하기</span>
@@ -19,7 +22,7 @@
 		<div class="ann_content_box">
 			<div class="inbox">
 				<div class="inner">
-					<form action="MemberAnnInsertPro.me" class="formAnniversary" method="post">
+					<form action='<c:url value="/member/anniversary/insert"/>' class="formAnniversary" method="post">
 						<div class="ann_form">
 						
 							<div class="row">
@@ -59,12 +62,9 @@
 			</div> <!--  inbox -->	
 		</div>	<!-- content_box -->
 	</div> <!-- container -->
-	
-					
-<%} else {
-AnniversaryBean annDetail = (AnniversaryBean) request.getAttribute("annDetail");
-%>
-	<div class="anniversary_container">	
+</c:when>
+<c:otherwise>
+	<div class="anniversary_container">
 		<div class="page_title">
 			<span class="title">기념일 수정하기</span>
 		</div>	
@@ -72,20 +72,20 @@ AnniversaryBean annDetail = (AnniversaryBean) request.getAttribute("annDetail");
 		<div class="ann_content_box">
 			<div class="inbox">
 				<div class="inner">
-					<form action="MemberAnnUpdatePro.me" class="formAnniversary" method="post">
+					<form action='<c:url value="/member/anniversary/update"/>' class="formAnniversary" method="post">
 						<div class="ann_form">
 						
 							<div class="row">
 								<div class="ann_name">기념일<span class="textStar">*</span></div> 
 								<div class="ann_input">
-									<input type="date" class="textBox" name="a_date" value="<%=annDetail.getA_date()%>" required>
+									<input type="date" class="textBox" name="a_date" value='${annDetail.a_date}' required>
 								</div>
 							</div>
 							
 							<div class="row">
 								<div class="ann_name">기념일 이름<span class="textStar">*</span></div>
 								<div class="ann_input">
-									<input type="text" class="textBox" name="a_name" value="<%=annDetail.getA_name()%>" required>
+									<input type="text" class="textBox" name="a_name" value="${annDetail.a_name}" required>
 								</div>
 							</div>
 							
@@ -93,16 +93,16 @@ AnniversaryBean annDetail = (AnniversaryBean) request.getAttribute("annDetail");
 								<div class="ann_name">반복 주기<span class="textStar">*</span></div>
 								<div class="ann_input">						
 									<select name="a_repeat" size="1" class="ann_select">								
-										<option value="0" <%if(annDetail.getA_repeat()==0){%>selected<%}%>>주기를 선택해주세요.</option>
-										<option value="1" <%if(annDetail.getA_repeat()==1){%>selected<%}%>>매년</option>
-										<option value="100" <%if(annDetail.getA_repeat()==100){%>selected<%}%>>100일마다</option>
+										<option value="0" ${annDetail.a_repeat == 0 ? "SELECTED" : ""}>주기를 선택해주세요.</option>
+										<option value="1" ${annDetail.a_repeat == 1 ? "SELECTED" : ""}>매년</option>
+										<option value="100" ${annDetail.a_repeat == 100 ? "SELECTED" : ""}>100일마다</option>
 									</select>								
 								</div>
 							</div>
 							
 							<div class="ann_submit_row">						
 								<div class="ann_submit_area">
-									<input type="hidden" name="a_id" value="<%=annDetail.getA_id()%>">							
+									<input type="hidden" name="a_id" value="${annDetail.a_id}">
 									<input type="submit" class="btn_submit" value="수정하기">
 								</div>
 							</div>
@@ -113,9 +113,7 @@ AnniversaryBean annDetail = (AnniversaryBean) request.getAttribute("annDetail");
 			</div><!-- inbox-->
 		</div><!-- container -->			
 	</div>
-<%
-}
-%>
-
+</c:otherwise>
+</c:choose>
 </body>
 </html>

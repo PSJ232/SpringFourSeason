@@ -11,4 +11,32 @@
     <select id="userCheck" resultType="com.itwillbs.domain.MemberBean">
         SELECT * FROM member WHERE m_id=#{m_id} AND m_pass=#{m_pass}
     </select>
+
+    <select id="selectMember" resultType="com.itwillbs.domain.MemberBean">
+        SELECT * FROM member WHERE m_id=#{m_id}
+    </select>
+
+    <insert id="registAnn">
+        INSERT INTO anniversary VALUES(#{a_id}, #{m_id}, #{a_date}, #{a_name}, #{a_repeat})
+    </insert>
+
+    <select id="selectAnnList" resultType="com.itwillbs.domain.AnniversaryBean">
+        SELECT * FROM anniversary WHERE m_id=#{m_id}
+    </select>
+
+    <select id="getAnn" resultType="com.itwillbs.domain.AnniversaryBean">
+        SELECT * FROM anniversary WHERE a_id=#{a_id}
+    </select>
+
+    <update id="updateAnn">
+        UPDATE anniversary SET a_date=#{a_date}, a_name=#{a_name}, a_repeat=#{a_repeat} WHERE a_id=#{a_id}
+    </update>
+
+    <delete id="deleteAnn">
+        DELETE FROM anniversary WHERE a_id=#{a_id}
+    </delete>
+
+    <delete id="deleteMember">
+        DELETE FROM member WHERE m_id=#{m_id} AND m_pass=#{m_pass}
+    </delete>
 </mapper>
