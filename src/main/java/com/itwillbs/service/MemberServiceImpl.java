@@ -5,8 +5,6 @@ import com.itwillbs.domain.MemberBean;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 
 @Service
 public class MemberServiceImpl implements MemberService{
@@ -32,5 +30,25 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public void deleteMember(MemberBean memberBean) {
         memberDAO.deleteMember(memberBean);
+    }
+
+    @Override
+    public Integer getSubscribeCnt(String m_id) {
+        return memberDAO.getSubscribeCnt(m_id);
+    }
+
+    @Override
+    public Integer getPurchaseCount(String m_id) {
+        return memberDAO.getPurchaseCount(m_id);
+    }
+
+    @Override
+    public Integer getMakingCount(String m_id) {
+        return memberDAO.getMakingCount(m_id);
+    }
+
+    @Override
+    public Integer getSendCount(String m_id) {
+        return memberDAO.getSendCount(m_id);
     }
 }

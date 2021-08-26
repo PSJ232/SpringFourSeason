@@ -39,4 +39,20 @@
     <delete id="deleteMember">
         DELETE FROM member WHERE m_id=#{m_id} AND m_pass=#{m_pass}
     </delete>
+
+    <select id="getSubscribeCnt" resultType="java.lang.Integer">
+        SELECT COUNT(DISTINCT o_id) FROM orders_detail WHERE m_id=#{m_id} AND od_confirm = 0 AND i_id IN (SELECT i_id FROM item WHERE i_category = 3)
+    </select>
+
+    <select id="getPurchaseCount" resultType="java.lang.Integer">
+        SELECT COUNT(od_id) FROM orders_detail WHERE m_id =#{m_id}
+    </select>
+
+    <select id="getMakingCount" resultType="java.lang.Integer">
+        SELECT COUNT(od_id) FROM orders_detail WHERE m_id =#{m_id} AND od_invoice='주문접수'
+    </select>
+
+    <select id="getSendCount" resultType="java.lang.Integer">
+        SELECT COUNT(od_id) FROM orders_detail WHERE m_id =#{m_id} AND od_confirm=2
+    </select>
 </mapper>

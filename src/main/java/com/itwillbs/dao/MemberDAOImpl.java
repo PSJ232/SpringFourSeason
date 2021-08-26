@@ -62,4 +62,24 @@ public class MemberDAOImpl implements MemberDAO{
         sqlSession.delete(namespace + ".deleteMember", memberBean);
     }
 
+    @Override
+    public Integer getSubscribeCnt(String m_id) {
+        return sqlSession.selectOne(namespace + ".getSubscribeCnt", m_id);
+    }
+
+    @Override
+    public Integer getPurchaseCount(String m_id) {
+        return sqlSession.selectOne(namespace + ".getPurchaseCount", m_id);
+    }
+
+    @Override
+    public Integer getMakingCount(String m_id) {
+        return sqlSession.selectOne(namespace + ".getMakingCount", m_id);
+    }
+
+    @Override
+    public Integer getSendCount(String m_id) {
+        return sqlSession.selectOne(namespace + ".getSendCount", m_id);
+    }
+
 }

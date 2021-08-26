@@ -158,4 +158,35 @@ public class MemberController {
         memberAnniversaryService.deleteAnn(a_id);
         return "redirect:/member/update";
     }
+
+    @RequestMapping(value = "/member/mypage", method = RequestMethod.GET)
+    public String mypage(HttpServletRequest request, Model model){
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id");
+        Integer purchaseCount = memberService.getPurchaseCount(m_id);
+        Integer makingCount = memberService.getMakingCount(m_id);
+        Integer sendCount = memberService.getSendCount(m_id);
+
+        model.addAttribute("purchaseCount", purchaseCount);
+        model.addAttribute("makingCount", makingCount);
+        model.addAttribute("sendCount", sendCount);
+
+        return "/mypage/mypage";
+    }
+
+    @RequestMapping(value = "/member/mypagebanner", method = RequestMethod.GET)
+    public String mypageBanner(HttpServletRequest request){
+
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id");
+
+        MemberBean memberBean = memberService.selectMember(m_id);
+        Integer subscribeCnt = memberService.getSubscribeCnt(m_id);
+        request.setAttribute("memberBean", memberBean);
+        if(subscribeCnt == null){
+            subscribeCnt = 0;
+        }
+        request.setAttribute("subscribeCnt", subscribeCnt);
+        return "/inc/mypagebanner";
+    }
 }

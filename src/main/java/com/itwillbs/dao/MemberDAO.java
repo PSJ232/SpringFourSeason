@@ -24,4 +24,12 @@ public interface MemberDAO {
     void deleteAnn(String a_id);
 
     void deleteMember(MemberBean memberBean);
+
+    Integer getSubscribeCnt(String m_id);
+
+    Integer getPurchaseCount(String m_id);
+
+    Integer getMakingCount(String m_id);
+
+    Integer getSendCount(String m_id);
 }

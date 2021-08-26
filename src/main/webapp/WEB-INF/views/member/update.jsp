@@ -31,8 +31,8 @@
 <body>
 	<!-- 헤더 들어가는곳 -->
 	<jsp:include page="../inc/header.jsp"></jsp:include>
-	<jsp:include page="../inc/mypagebanner.jsp"></jsp:include>
-
+<%--	<jsp:include page="../inc/mypagebanner.jsp"></jsp:include>--%>
+	<jsp:include page="/member/mypagebanner"></jsp:include>
 	<div class ="mypage_update_container">
 		<jsp:include page="../inc/mypagemenu.jsp"></jsp:include>
 		

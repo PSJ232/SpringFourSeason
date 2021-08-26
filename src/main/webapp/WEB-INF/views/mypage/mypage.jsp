@@ -1,6 +1,6 @@
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,20 +14,12 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 </head>
-<%--<%--%>
-<%--ArrayList<Integer> purchaseCount = (ArrayList<Integer>)request.getAttribute("purchaseCount"); --%>
-<%--ArrayList<Integer> makingCount = (ArrayList<Integer>)request.getAttribute("makingCount"); --%>
-<%--ArrayList<Integer> sendCount = (ArrayList<Integer>)request.getAttribute("sendCount"); --%>
-<%--System.out.println("purchaseCount = " + purchaseCount.size());--%>
-<%--System.out.println("makingCount = " + makingCount.size());--%>
-<%--System.out.println("sendCount = " + sendCount.size());--%>
-<%--%>--%>
 
 <body>
 		<jsp:include page="../inc/header.jsp"></jsp:include>
 
-	<jsp:include page="../inc/mypagebanner.jsp"></jsp:include>
-	
+	<jsp:include page="/member/mypagebanner"></jsp:include>
+
 	<div class="mypage_container">
 		<jsp:include page="../inc/mypagemenu.jsp"></jsp:include>
 		<!-- 본문 내용 -->
@@ -48,19 +40,19 @@
 							</dd>
 						</dl>
 						<dl class="mypage_center_dl">
-<%--							<dt class="mypage_center_dt"><%=purchaseCount.size() %></dt>--%>
+							<dt class="mypage_center_dt">${purchaseCount}</dt>
 							<dd class="mypage_center_dd">
 								결제완료 <a href=""> </a>
 							</dd>
 						</dl>
 						<dl class="mypage_center_dl">
-<%--							<dt class="mypage_center_dt"><%=makingCount.size() %></dt>--%>
+							<dt class="mypage_center_dt">${makingCount}</dt>
 							<dd class="mypage_center_dd">
 								상품준비중<a href=""></a>
 							</dd>
 						</dl>
 						<dl class="mypage_center_dl">
-<%--							<dt class="mypage_center_dt"><%=sendCount.size() %></dt>--%>
+							<dt class="mypage_center_dt">${sendCount}</dt>
 							<dd class="mypage_center_dd">
 								발송완료<a href=""></a>
 							</dd>

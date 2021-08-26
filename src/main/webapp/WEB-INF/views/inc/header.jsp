@@ -51,39 +51,35 @@ String moveMypage = "";
 if(m_id == null) {
 	moveMypage = "/member/login";
 } else {
-	moveMypage = "MypageOrderStatus.me";
+	moveMypage = "/member/mypage";
 }
 %>
 </head>
 <body>
+
 	<header id="container">
 		<div>
 			<!--광고-->
 		</div>
 		<div class="nav_service_area">
-			<%
-			if (m_id == null) {
-			%>
-				<a class="nav_service_item" href='<c:url value="/member/login" />'>로그인</a>
-				<i class="nav_service_bar"></i>
-				<a class="nav_service_item"	href='<c:url value="/member/join" />'>회원가입<span class="color_blue fontweight_600">(1000포인트 지급!)</span></a>
-				<i class="nav_service_bar"></i>
-				<a class="nav_service_item fontweight_600">기업제휴</a>
-			<%
-			} else { 
-				if (m_id.equals("admin@admin.com")) {
-			%>
-					<a href="DashBoard.ad">관리자페이지</a>
+			<c:choose>
+				<c:when test="${empty sessionScope.m_id}">
+					<a class="nav_service_item" href='<c:url value="/member/login" />'>로그인</a>
 					<i class="nav_service_bar"></i>
-				<%
-				}
-				%>
-				<a class="nav_service_item"	href='<c:url value="/member/logout" />'>로그아웃</a>
-				<i class="nav_service_bar"></i>
-				<a class="nav_service_item fontweight_600">기업제휴</a>
-			<%
-			}
-			%>
+					<a class="nav_service_item"	href='<c:url value="/member/join" />'>회원가입<span class="color_blue fontweight_600">(1000포인트 지급!)</span></a>
+					<i class="nav_service_bar"></i>
+					<a class="nav_service_item fontweight_600">기업제휴</a>
+				</c:when>
+				<c:otherwise>
+<%--					<c:when test="${sessionScope.m_id eq 'admin@admin.com'}">--%>
+						<a href="DashBoard.ad">관리자페이지</a>
+						<i class="nav_service_bar"></i>
+<%--					</c:when>--%>
+					<a class="nav_service_item"	href='<c:url value="/member/logout" />'>로그아웃</a>
+					<i class="nav_service_bar"></i>
+					<a class="nav_service_item fontweight_600">기업제휴</a>
+				</c:otherwise>
+			</c:choose>
 		</div>
 		<div>
 
