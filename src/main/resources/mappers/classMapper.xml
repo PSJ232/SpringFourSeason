@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwillbs.mapper.ClassMapper">
+    <select id="getDetailContent" resultType="com.itwillbs.domain.ClassBean">
+        SELECT * FROM fclass WHERE f_id=#{f_id}
+    </select>
+
+    <select id="getPlaceNFidList" resultType="com.itwillbs.domain.ClassBean">
+        SELECT f_id, f_place FROM fclass WHERE f_subject = #{f_subject} and f_cdate = #{f_cdate}
+    </select>
+
+    <select id="getTimeList" resultType="com.itwillbs.domain.ClassDetailBean">
+        SELECT fd_time FROM fclass_detail WHERE f_id=#{f_id}
+    </select>
+</mapper>

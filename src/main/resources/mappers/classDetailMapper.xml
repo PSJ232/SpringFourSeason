@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itwillbs.mapper.ClassDetailMapper">
+    <select id="getTimeList" resultType="Integer">
+        SELECT fd_time FROM fclass_detail WHERE f_id=#{f_id}
+    </select>
+
+    <select id="getMaxMum" resultType="Integer">
+        SELECT f_maxmem FROM fclass WHERE f_id = #{f_id}
+    </select>
+
+    <select id="getClassDetailId" resultType="Integer">
+        SELECT fd_id FROM fclass_detail WHERE fd_date = #{fc_date} and fd_time = #{fd_time} and fd_place = #{f_place}
+    </select>
+
+    <select id="getCurrentNum" resultType="Integer">
+        SELECT SUM(r_num) FROM reservation WHERE fd_id=#{fd_id}
+    </select>
+
+    <select id="numCheck" resultType="Integer">
+        SELECT SUM(r_num) FROM reservation WHERE f_id=#{f_id}
+    </select>
+
+    <insert id="insertReserv">
+        INSERT INTO reservation VALUES(#{r_id},#{m_id},#{f_id},#{fd_id},#{r_num},#{r_payment},now(),#{r_confirm},#{r_amount})
+    </insert>
+</mapper>

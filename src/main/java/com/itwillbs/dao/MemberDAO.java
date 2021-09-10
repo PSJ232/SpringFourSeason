@@ -4,6 +4,7 @@ package com.itwillbs.dao;
 import com.itwillbs.domain.AnniversaryBean;
 import com.itwillbs.domain.MemberBean;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface MemberDAO {
@@ -32,4 +33,8 @@ public interface MemberDAO {
     Integer getMakingCount(String m_id);
 
     Integer getSendCount(String m_id);
+
+    float getGradeDetail(int g_id);
+
+    void usePoint(HashMap paraMap);
 }

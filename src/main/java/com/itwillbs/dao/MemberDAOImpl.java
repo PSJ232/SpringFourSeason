@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
+import java.util.HashMap;
 import java.util.List;
 
 @Repository
@@ -82,4 +83,11 @@ public class MemberDAOImpl implements MemberDAO{
         return sqlSession.selectOne(namespace + ".getSendCount", m_id);
     }
 
+    @Override
+    public float getGradeDetail(int g_id) { return sqlSession.selectOne(namespace + ".getGradeDetail", g_id); }
+
+    @Override
+    public void usePoint(HashMap paraMap) {
+        sqlSession.update(namespace + ".usePoint", paraMap);
+    }
 }

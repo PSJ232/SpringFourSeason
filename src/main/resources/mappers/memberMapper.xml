@@ -55,4 +55,12 @@
     <select id="getSendCount" resultType="java.lang.Integer">
         SELECT COUNT(od_id) FROM orders_detail WHERE m_id =#{m_id} AND od_confirm=2
     </select>
+
+    <select id ="getGradeDetail" resultType="float">
+        SELECT g_discount FROM grade WHERE g_id=#{g_id}
+    </select>
+
+    <update id="usePoint">
+        UPDATE member SET m_point = m_point- #{point_discount} WHERE m_id=#{m_id}
+    </update>
 </mapper>

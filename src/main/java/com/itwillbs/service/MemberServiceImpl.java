@@ -5,6 +5,7 @@ import com.itwillbs.domain.MemberBean;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+import java.util.HashMap;
 
 @Service
 public class MemberServiceImpl implements MemberService{
@@ -50,5 +51,13 @@ public class MemberServiceImpl implements MemberService{
     @Override
     public Integer getSendCount(String m_id) {
         return memberDAO.getSendCount(m_id);
+    }
+
+    @Override
+    public float getGradeDetail(int g_id) { return memberDAO.getGradeDetail(g_id); }
+
+    @Override
+    public void usePoint(HashMap paraMap) {
+        memberDAO.usePoint(paraMap);
     }
 }

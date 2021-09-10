@@ -15,7 +15,7 @@ public class OrderDAOImpl implements OrderDAO{
 
     @Override
     public int makeId(String table, String colName) {
-        Map<String, String> paramMap = new HashMap<String, String>();
+        HashMap paramMap = new HashMap();
         paramMap.put("table", table);
         paramMap.put("colName", colName);
         return sqlSession.selectOne(namespace + ".makeId", paramMap);

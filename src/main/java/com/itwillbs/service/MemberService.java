@@ -2,6 +2,8 @@ package com.itwillbs.service;
 
 import com.itwillbs.domain.MemberBean;
 
+import java.util.HashMap;
+
 public interface MemberService {
 
     public void registMember(MemberBean memberBean);
@@ -19,4 +21,8 @@ public interface MemberService {
     Integer getMakingCount(String m_id);
 
     Integer getSendCount(String m_id);
+
+    float getGradeDetail(int g_id);
+
+    void usePoint(HashMap paraMap);
 }
