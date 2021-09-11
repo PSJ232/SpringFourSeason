@@ -189,4 +189,10 @@ public class MemberController {
         request.setAttribute("subscribeCnt", subscribeCnt);
         return "/inc/mypagebanner";
     }
+
+    @RequestMapping(value="/member/mypage/class", method = RequestMethod.GET)
+    public String mypageClass(HttpServletRequest request) {
+        System.out.println("member/mypage/class");
+        return "/mypage/class";
+    }
 }

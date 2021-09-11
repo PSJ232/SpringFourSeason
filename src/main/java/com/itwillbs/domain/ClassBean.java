@@ -15,9 +15,9 @@ public class ClassBean {
 	private String f_sub_img3;
 
 	private String f_rdate;
-	// 클래스를 db에 insert한 날짜
+	// 클래스를 db에 insert한 날짜 // class_create_date
 	private String f_cdate;
-	// class가 시작하는 날짜
+	// class가 시작하는 날짜 // class_date
 	private int f_readcount;
 	private String f_sub_desc;
 	private String f_desc_img;

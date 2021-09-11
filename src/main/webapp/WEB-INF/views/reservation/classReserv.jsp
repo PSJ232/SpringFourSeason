@@ -16,12 +16,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
-<%
-//	ClassBean cb = (ClassBean) request.getAttribute("cb");
-//	DecimalFormat dc = new DecimalFormat("###,###,###,###");
-//	String class_price = dc.format(cb.getClass_price());
-%>
-
 <body>
 	<!-- header -->
 	<jsp:include page="../inc/header.jsp" ></jsp:include>
@@ -370,7 +364,7 @@ function ctlNum(num, price){
 	            	let str = JSON.stringify(rdata);
 	            	for(var i=0 ; i<rdata.length ; i++){
 						var path = "/reservation/classReserve?f_id="+rdata[i].f_id;
-						<%--$('#classPlace').append('<li><a class="placebtn_id" href='<c:url value="/reservation/classReserve?f_id=id" />'> place </a></li>');--%>
+						<%--$('#classPlace').append('<li><a class="placebtn_${rdata[i].f_id}" href="/reservation/classReserve?f_id=x${rdata[i].f_id}'> ${rdata[i].f_place} </a></li>');--%>
 						$('#classPlace').append('<li><a class="placebtn_'+rdata[i].f_id+'" href=ClassReserv.od?f_id='+rdata[i].f_id+'>'+rdata[i].f_place+'</a></li>');
 					}
 	            	$('.placebtn_'+$('#f_id').val()).addClass('shop_class_btn_yellow');

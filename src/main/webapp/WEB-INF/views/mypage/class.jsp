@@ -1,5 +1,5 @@
-<%@page import="vo.MyClassBean"%>
 <%@page import="java.util.ArrayList"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,60 +12,47 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
-<link href="css/mypage.css" rel="stylesheet">
-<link rel="stylesheet" href="./css/mypage_class.css">
-<link rel="stylesheet" href="./css/utility.css">
-<link rel="stylesheet" href="./css/style.css">
+<link href='<c:url value="/resources/css/style.css" />' rel="stylesheet" type="text/css">
+<link href='<c:url value="/resources/css/utility.css" />' rel="stylesheet" type="text/css">
+<link href='<c:url value="/resources/css/mypage_class.css" />' rel="stylesheet" type="text/css">
+<link href='<c:url value="/resources/css/mypage.css" />' rel="stylesheet" type="text/css">
 <script>
-	$(document)
-			.ready(
-					function() {
-						$
-								.ajax(
-										'plannedMyClass.me',
-										{
-											type : 'GET',
-											success : function(rdata) {
+	$(document).ready(function() {
+		$.ajax('<c:url value="/class/mypage/planned"/>',
+				{
+				type : 'GET',
+				success : function(rdata) {
+					if (rdata.trim() != "") {
+							$('#planned_myclass_list').append(rdata);
+					} else {
+							$('#planned_myclass_list').append(
+									'<tr class="planned_myclass_nothing">'
+										+ '<td colspan="3">'
+										+ '<p>등록된 클래스 정보가 존재하지 않습니다.</p>'
+										+ '<button onclick="location.href='+ './' +  'class="btn_wide btn_yellow">클래스 보러가기</button>'
+										+ '</td></tr>');
+					}
+				}});
 
-												if (rdata.trim() != "") {
-													$('#planned_myclass_list')
-															.append(rdata);
-												} else {
-													$('#planned_myclass_list')
-															.append(
-																	'<tr class="planned_myclass_nothing">'
-																			+ '<td colspan="3">'
-																			+ '<p>등록된 클래스 정보가 존재하지 않습니다.</p>'
-																			+ '<button onclick="href='+'#'+'" class="btn_wide btn_yellow">클래스 보러가기</button>'
-																			+ '</td></tr>');
-												}
-											}
-										});
-
-						$
-								.ajax(
-										'pastMyClass.me',
-										{
-											type : 'GET',
-											success : function(rdata) {
-												if (rdata.trim() != "") {
-													$('#past_myclass_list')
-															.append(rdata);
-												} else {
-													$('#past_myclass_list')
-															.append(
-																	'<tr><td colspan="2">수강한 클래스 내역이 없습니다</td></tr>');
-												}
-											}
-										});
-					});
+		$.ajax('<c:url value="/class/mypage/past"/>', {
+				type : 'GET',
+				success : function(rdata) {
+					if (rdata.trim() != "") {
+						$('#past_myclass_list').append(rdata);
+					} else {
+						$('#past_myclass_list').append(
+								'<tr><td colspan="2">수강한 클래스 내역이 없습니다</td></tr>');
+					}
+				}
+			});
+	});
 </script>
 </head>
 <body>
 
 	<jsp:include page="../inc/header.jsp"></jsp:include>
 
-	<jsp:include page="../inc/mypagebanner.jsp"></jsp:include>
+	<jsp:include page="/member/mypagebanner"></jsp:include>
 
 	<div class="mypage_container">
 		<jsp:include page="../inc/mypagemenu.jsp"></jsp:include>

@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -47,5 +48,20 @@ public class ClassDetailDAOImpl implements ClassDetailDAO {
     @Override
     public void insertReserv(ReserveBean rb) {
        sqlSession.insert(namespace + ".insertReserv", rb);
+    }
+
+    @Override
+    public List<ReserveBean> getReservList(String m_id) {
+        return sqlSession.selectList(namespace+".getReservList", m_id);
+    }
+
+    @Override
+    public int getMyClassTime(int fd_id) {
+        return sqlSession.selectOne(namespace + ".getMyClassTime", fd_id);
+    }
+
+    @Override
+    public ClassDetailBean getClassDetail(int fd_id) {
+        return sqlSession.selectOne(namespace + ".getClassDetail", fd_id);
     }
 }

@@ -13,4 +13,12 @@
     <select id="getTimeList" resultType="com.itwillbs.domain.ClassDetailBean">
         SELECT fd_time FROM fclass_detail WHERE f_id=#{f_id}
     </select>
+
+    <select id="getMyClassInfo" resultType="com.itwillbs.domain.ClassBean">
+        SELECT * FROM fclass WHERE f_id = #{f_id}
+    </select>
+
+    <delete id="cancleClass">
+        DELETE FROM reservation WHERE r_id = #{r_id}
+    </delete>
 </mapper>

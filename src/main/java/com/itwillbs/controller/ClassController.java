@@ -1,10 +1,7 @@
 package com.itwillbs.controller;
 
 import com.google.gson.Gson;
-import com.itwillbs.domain.ClassBean;
-import com.itwillbs.domain.ClassDetailBean;
-import com.itwillbs.domain.MemberBean;
-import com.itwillbs.domain.ReserveBean;
+import com.itwillbs.domain.*;
 import com.itwillbs.service.*;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -311,9 +308,165 @@ public class ClassController {
         return null;
     }
 
+    @RequestMapping(value="/class/mypage/planned", method = RequestMethod.GET)
+    public String ReservList(HttpServletRequest request, Model model) {
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id"); //request.getParameter("m_id");
+
+        List<ReserveBean> reservList = classDetailService.getReservList(m_id);
+        List<MyClassBean> plannedClassList = new ArrayList<MyClassBean>();
+        List<MyClassBean> pastClassList = new ArrayList<MyClassBean>();
+
+        for(ReserveBean rb: reservList) {
+            //클래스 정보 가져오기
+            ClassBean cb = classService.getMyClassInfo(rb.getF_id());
+            //클래스 날짜 가져오기
+            int fd_time = classDetailService.getMyClassTime(rb.getFd_id());
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date ClassDay = null;
+            Date today = null;
+
+            //현재 날짜 구하기
+            Calendar cal = Calendar.getInstance();
+            int year = cal.get(Calendar.YEAR);
+            int month = cal.get(Calendar.MONTH)+1;
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+
+            System.out.println("cb.getF_cdate() : " + cb.getF_cdate());
+            try {
+                ClassDay = dateFormat.parse(cb.getF_cdate());
+                today = dateFormat.parse(year+"-"+month+"-"+day);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            //날짜 비교
+            int compare = ClassDay.compareTo(today);
+            System.out.println("compare : " + compare);
+
+            MyClassBean mcb = new MyClassBean();
+            mcb.setF_id(rb.getF_id());
+            mcb.setR_id(rb.getR_id());
+            mcb.setSubject(cb.getF_subject());
+            mcb.setPlace(cb.getF_place());
+            mcb.setPrice(cb.getF_price());
+            mcb.setClass_date(cb.getF_cdate());
+            mcb.setImg(cb.getF_main_img());
+            mcb.setTime(fd_time);
+            mcb.setNum(rb.getR_num());
+            mcb.setReserv_date(rb.getR_date());
+
+            //클래스 수강일이 오늘이거나, 오늘 이후이면
+            if(compare>=0) {
+                plannedClassList.add(mcb);
+                model.addAttribute("plannedClassList", plannedClassList);
+            }
+
+        }
+        return "/mypage/plannedClassBack";
+
+    }
+
+    @RequestMapping(value="/class/mypage/past", method = RequestMethod.GET)
+    public String PastMyClassListAction(HttpServletRequest request, HttpServletResponse response) {
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id"); //request.getParameter("m_id");
+
+        List<ReserveBean> reservList = classDetailService.getReservList(m_id);
+        List<MyClassBean> plannedClassList = new ArrayList<MyClassBean>();
+        List<MyClassBean> pastClassList = new ArrayList<MyClassBean>();
+
+        for(ReserveBean rb: reservList) {
+            //클래스 정보 가져오기
+            ClassBean cb = classService.getMyClassInfo(rb.getF_id());
+            //클래스 날짜 가져오기
+            int fd_time = classDetailService.getMyClassTime(rb.getFd_id());
+
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+            Date ClassDay = null;
+            Date today = null;
+
+            //현재 날짜 구하기
+            Calendar cal = Calendar.getInstance();
+            int year = cal.get(Calendar.YEAR);
+            int month = cal.get(Calendar.MONTH)+1;
+            int day = cal.get(Calendar.DAY_OF_MONTH);
+
+            System.out.println("cb.getF_cdate() : " + cb.getF_cdate());
+            try {
+                ClassDay = dateFormat.parse(cb.getF_cdate());
+                today = dateFormat.parse(year+"-"+month+"-"+day);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            //날짜 비교
+            int compare = ClassDay.compareTo(today);
+            System.out.println("compare : " + compare);
+
+            MyClassBean mcb = new MyClassBean();
+            mcb.setF_id(rb.getF_id());
+            mcb.setR_id(rb.getR_id());
+            mcb.setSubject(cb.getF_subject());
+            mcb.setPlace(cb.getF_place());
+            mcb.setPrice(cb.getF_price());
+            mcb.setClass_date(cb.getF_cdate());
+            mcb.setImg(cb.getF_main_img());
+            mcb.setTime(fd_time);
+            mcb.setNum(rb.getR_num());
+            mcb.setReserv_date(rb.getR_date());
+
+            //클래스 수강일이 지났다면
+            if(compare<0) {
+                pastClassList.add(mcb);
+                request.setAttribute("pastClassList", pastClassList);
+            }
+
+        }
+        return "/mypage/pastClassBack";
+
+    }
+
+    @RequestMapping(value="/class/cancle", method = RequestMethod.GET)
+    public String CancleClass(HttpServletRequest request, HttpServletResponse response) {
+        boolean isCancleSuccess = false;
+        int r_id = Integer.parseInt(request.getParameter("r_id"));
+        System.out.println("r_id - "+ r_id);
+
+        HttpSession session = request.getSession();
+        String m_id = (String) session.getAttribute("m_id");
+        System.out.println("m_id - "+ m_id);
+
+        classService.cancleClass(r_id);
+
+        return "/reservation/cancle_info";
+    }
+
+
+    @RequestMapping(value="/reservation/pay", method = RequestMethod.GET)
+    public String ReservPay(HttpServletRequest request) {
+        ReserveBean rb = (ReserveBean) request.getAttribute("reservBean");
+        System.out.println("!!!!!!!!r" + rb.getR_id());
+
+        //클래스 정보 가져오기
+        ClassBean cb = classService.getMyClassInfo(rb.getF_id());
+
+        //클래스 디테일 가져오기(장소, 날짜, 시간)
+        ClassDetailBean cdb = classDetailService.getClassDetail(rb.getFd_id());
+
+        MemberBean mb = memberService.selectMember(rb.getM_id());
+
+        if (cb != null && cdb != null && mb != null) {
+            request.setAttribute("reservBean", rb);
+            request.setAttribute("fclass", cb);
+            request.setAttribute("fclass_detail", cdb);
+            request.setAttribute("member", mb);
+        }
+        return "/reservation/reservPay";
+    }
 
 }
-
 
 
 

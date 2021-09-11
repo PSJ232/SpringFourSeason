@@ -55,7 +55,7 @@ String name = (String) request.getAttribute("name");
 					</div>
 					
 					<div class="submit_col">
-						<button class="show_detail" onclick="location.href='MyClass.me'">주문 내역 조회</button>
+						<button class="show_detail" onclick="location.href='<c:url value="/member/mypage/class"/>'">주문 내역 조회</button>
 					</div>
 					
 				</div>

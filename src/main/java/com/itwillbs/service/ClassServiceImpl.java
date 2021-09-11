@@ -25,4 +25,13 @@ public class ClassServiceImpl implements ClassService {
         return classDAO.getPlaceNFidList(f_subject, f_cdate);
     }
 
+    @Override
+    public ClassBean getMyClassInfo(int f_id) {
+        return classDAO.getMyClassInfo(f_id);
+    }
+
+    @Override
+    public void cancleClass(int r_id) {
+        classDAO.cancleClass(r_id);
+    }
 }

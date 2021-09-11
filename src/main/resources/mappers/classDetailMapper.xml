@@ -25,4 +25,16 @@
     <insert id="insertReserv">
         INSERT INTO reservation VALUES(#{r_id},#{m_id},#{f_id},#{fd_id},#{r_num},#{r_payment},now(),#{r_confirm},#{r_amount})
     </insert>
+
+    <select id="getReservList" resultType="com.itwillbs.domain.ReserveBean">
+        SELECT * FROM reservation WHERE m_id = #{m_id}
+    </select>
+
+    <select id="getMyClassTime" resultType="Integer">
+        SELECT fd_time FROM fclass_detail WHERE fd_id = #{fd_id}
+    </select>
+
+    <select id="getClassDetail" resultType="com.itwillbs.domain.ClassDetailBean">
+        SELECT * FROM fclass_detail WHERE fd_id=#{fd_id}
+    </select>
 </mapper>

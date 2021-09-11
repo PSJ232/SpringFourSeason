@@ -1,5 +1,5 @@
-<%@page import="vo.MyClassBean"%>
 <%@page import="java.util.ArrayList"%>
+<%@ page import="com.itwillbs.domain.MyClassBean" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%

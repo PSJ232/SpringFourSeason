@@ -35,22 +35,16 @@ public class ClassDAOImpl implements ClassDAO {
         return list;
     }
 
+    @Override
+    public ClassBean getMyClassInfo(int f_id) {
+        return sqlSession.selectOne(namespace + ".getMyClassInfo", f_id);
+    }
+
+    @Override
+    public void cancleClass(int r_id) {
+        sqlSession.delete(namespace + ".cancleClass", r_id);
+    }
 }
 
 
-//import java.util.*;
-//        import org.json.simple.*;
-//public class ConvertListToJSONArrayTest {
-//    public static void main(String[] args) {
-//        List<String> list = new ArrayList<String>();
-//        list.add("India");
-//        list.add("Australia");
-//        list.add("England");
-//        list.add("South Africa");
-//        list.add("West Indies");
-//        list.add("Newzealand");
-//        // this method converts a list to JSON Array
-//        String jsonStr = JSONArray.toJSONString(list);
-//        System.out.println(jsonStr);
-//    }
-//}
+

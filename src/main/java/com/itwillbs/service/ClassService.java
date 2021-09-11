@@ -10,4 +10,7 @@ public interface ClassService {
 
     List<ClassBean> getPlaceNFidList(String f_subject, String f_cdate);
 
+    ClassBean getMyClassInfo(int f_id);
+
+    void cancleClass(int r_id);
 }

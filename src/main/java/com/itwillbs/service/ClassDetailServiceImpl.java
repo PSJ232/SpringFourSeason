@@ -7,6 +7,7 @@ import com.itwillbs.domain.ReserveBean;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -45,5 +46,20 @@ public class ClassDetailServiceImpl implements ClassDetailService{
     @Override
     public void insertReserv(ReserveBean rb) {
         classDetailDAO.insertReserv(rb);
+    }
+
+    @Override
+    public List<ReserveBean> getReservList(String m_id) {
+        return classDetailDAO.getReservList(m_id);
+    }
+
+    @Override
+    public int getMyClassTime(int fd_id) {
+        return classDetailDAO.getMyClassTime(fd_id);
+    }
+
+    @Override
+    public ClassDetailBean getClassDetail(int fd_id) {
+        return classDetailDAO.getClassDetail(fd_id);
     }
 }
